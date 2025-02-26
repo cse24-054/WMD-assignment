@@ -1,12 +1,15 @@
-body{
-  font-family: Arial, sans-serif;
+<style>
+body {
+  background-image: url("https://wallpaperaccess.com/full/5600212.jpg);
+}
+</style>
+  font-family:brush Lucida HandWritting cursive;
   color:#333;
-  background-color:#f9f9f9;
   margin: 0;
   padding: 0;
   line-height: 1.6;}
 header{
-  background-color: #4CAF50;
+ " background-color:slateblue" 
   color: white;
   padding: 20px;
   text-align: center;
