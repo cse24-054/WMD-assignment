@@ -1,6 +1,6 @@
 <style>
 body {
-  background-image: url("https://wallpaperaccess.com/full/5600212.jpg);
+  background-color:#f9f9f9
 
   font-family:brush Lucida HandWritting cursive;
   color:#333;
@@ -8,7 +8,7 @@ body {
   padding: 0;
   line-height: 1.6;}
 header{
- " background-color:slateblue" 
+ " background-color:#4CAF50; 
   color: white;
   padding: 20px;
   text-align: center;
