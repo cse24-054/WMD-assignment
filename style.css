@@ -7,13 +7,13 @@ body,h1,h2,p {
 body{
   font-family:'Lucida Handwriting',Brush Script MT'
   color:white;
-  background-image:url('https://th.bing.com/th/id/OIP.Tx-mUgiWs6-zbFd6lA7CcAHaFL?rs=1&pid=ImgDetMain.jpg');
+  background-image:url('');
   background-size:cover;
   background-position: center;
 }
 /*Header styles*/
 header {
-  background-color:rgba(0,0,0,0.7);
+  background-color:white;
   padding:10px;
   text-align:left;
 }
@@ -38,7 +38,7 @@ section {
 footer {
   text-align: center;
   padding:10px;
-  background-color: rgba(0,0,0,0.7);
+  background-color:white;
 }
 /*Responsive styles*/
 @media(max-width:600px) {
