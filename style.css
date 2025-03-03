@@ -1,1 +1,53 @@
-
+/*Reset default browser styles*/
+body,h1,h2,p {
+  margin:0;
+  padding: 0;
+}
+/*set the body properties*/
+body{
+  font-family:'Lucida Handwriting',Brush Script MT'
+  color:Black;
+  background-image:url('https://th.bing.com/th/id/OIP.u0UQQmb9GYiTwZpqDVPAagHaEo?w=1920&h=1200&rs=1&pid=ImgDetMain.jpg');
+  background-size:cover;
+  background-position: center;
+}
+/*Header styles*/
+header {
+  background-color:rgba(0,0,0,0.7);
+  padding:10px;
+  text-align:left;
+}
+/*navigation styles*/
+nav ul{
+  list-style-type: none;
+  padding: o;
+}
+nav ul li a {
+  color:white;
+  text-decoration: none;
+  font-weight:bold;
+}
+/*section-styles*/
+section {
+  padding:10px;
+  margin:10px 0;
+  background-color: rgba(0,0,0,0.5);
+  border-radius:8px;/*rounded corners*/
+}
+/* Footer styles*/
+footer {
+  text-align: center;
+  padding:10px;
+  background-color: rgba(0,0,0,0.7);
+}
+/*Responsive styles*/
+@media(max-width:600px) {
+  nav ul li{
+    display:block;
+    margin:10px 0;
+  }
+  section {
+    margin:10px;
+  }
+}
+  
