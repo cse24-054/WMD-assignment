@@ -7,9 +7,20 @@ body,h1,h2,p {
 body{
   font-family:'Lucida Handwriting',Brush Script MT'
   color:white;
-  background-image:url('https://wallpaperaccess.com/full/5600378.jpg');
-  background-size:cover;
+ background-size:cover;
   background-position: center;
+}
+.Home {
+  background-image:url('https://th.bing.com/th/id/OIP.eDwyKx5DXtO1fr368zO16gEyDM?rs=1&pid=ImgDetMain.jpg');
+}
+.About {
+  backgroung-image:url('https://th.bing.com/th/id/OIP.c40jCxvcT8_Z1lj3uMKNAgAAAA?w=260&h=181&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg');
+}
+.Services {
+  background-image:url('https://static.vecteezy.com/system/resources/previews/020/139/978/non_2x/champagne-glasses-arranged-on-the-table-for-wedding-reception-photo.jpg');
+}
+.Contacts {
+  background-image:url('https://static.vecteezy.com/system/resources/previews/008/212/797/original/catering-logo-design-template-vector.jpg');
 }
 /*Header styles*/
 header {
