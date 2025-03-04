@@ -20,6 +20,10 @@ header {
   padding:10px;
   text-align:left;
 }
+header.logo {
+  font-size: 24px;
+  font-weight:bold;
+}
 /*navigation styles*/
 nav ul{
   list-style-type: none;
@@ -29,6 +33,39 @@ nav ul li a {
   color:white;
   text-decoration: none;
   font-weight:bold;
+}
+.welcome {
+  background:url('')
+    no-repeat center center/cover
+    color:Black
+text-align:center;
+padding: 100px 20px;
+}
+.welcome h1 {
+  font-size:48px;
+}
+.welcome p {
+  font-size:24px;
+}
+.welcome button {
+  padding: 10px 20px;
+  background-color:#e63946;
+  border:none;
+  color:white;
+  curser:pointer;
+}
+.info{
+  display: flex;
+  justify-content: space-around;
+  padding:40px 20px;
+}
+.card {
+  background:white;
+  border-radius: 8px;
+  padding:10px;
+  text-align:center;
+  bow-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width:30%;
 }
 .services{
   max-width:1200px;
@@ -49,6 +86,33 @@ article img{
   max-width:100%;
   height: auto;
   border-radius: 5px;
+}
+.menu {
+  max-width: 1200px;
+  margin: 10px auto;
+  padding:10px;
+}
+.menu h1{
+  text-align:center;
+  margin-bottom:40px
+}
+.menu-list{
+  display:flex;
+  align-list:center;
+  background:white;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.menu-list img{
+  width: 150px;
+  height:auto;
+  border-radius: 5px;
+  margin-right: 20px
+}
+.menu-list h2{
+  margin:0 0 10px o;
 }
   
   
