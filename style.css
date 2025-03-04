@@ -30,6 +30,28 @@ nav ul li a {
   text-decoration: none;
   font-weight:bold;
 }
+.services{
+  max-width:1200px;
+  margin: 20px auto;
+}
+.service-list{
+  display: grid;
+  grid-template-columns:
+  repeat(auto-fill,minmax(300px,1fr));
+  gap: 10px;}
+article{
+  backgroung:#f4f4f4;
+  padding 10px;
+  border-radius: 5px;
+  text align:left;
+}
+article img{
+  max-width:100%;
+  height: auto;
+  border-radius: 5px;
+}
+  
+  
 /*section-styles*/
 section {
   padding:10px;
@@ -48,6 +70,10 @@ footer {
   nav ul li{
     display:block;
     margin:10px 0;
+  }
+  vedio{
+    width:100%;/*make the vedio responsive*/
+    height:auto;
   }
   section {
     margin:10px;
