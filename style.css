@@ -35,6 +35,38 @@ h1,h2{color:#907022;
   width:250px
   transition:box-shadow0.3s;
   cursor:pointer;}
+.Menu {
+  max-width:600px;
+  margin:auto;
+}
+.menu-button,.sub-menu-button{
+  background-color:#4CAF50;
+  color:white
+  padding: 10px;
+  border:none;
+  border-radius:5px;
+  cursor:ponter;
+  width:100%
+  text-align:left;
+  font-size: 16px;
+  margin: 5px 0;
+}
+.menu-button:hover,.sub-menu-button:hover{
+  dispay:none
+  padding:10px;
+  border-radius:5px;
+  background-color: #fff;
+  margin: 5px 0 10px 0;
+}
+.menu-content ul,.sub-menu-content ul{
+  list-style-type:none;
+  padding:0;
+}
+.menu-content img,.sub-menu-content img{
+  height:auto;
+  display:block;
+  margin:5px 0;
+}
   
   
   
