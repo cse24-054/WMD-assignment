@@ -63,7 +63,8 @@ h1,h2{color:#907022;
   padding:0;
 }
 .menu-content img,.sub-menu-content img{
-  height:auto;
+  width:185px;
+  height:186px;
   display:block;
   margin:5px 0;
 }
