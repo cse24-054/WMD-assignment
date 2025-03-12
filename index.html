@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
      <style>
       body{background-color:#124017;}
-      h1 {display:block; text-align:centre;}
+      h1 {display:block; text-align:left;}
        h1,h2,h3{text-color:#AFA712;}
        
       </style>
@@ -43,8 +43,25 @@
 .container .btn:hover {
   background-color: black;
   color: white;
-  .button {
-  display: block;
+.btn-group .button {
+  background-color: #04AA6D; /* Green */
+  border: 1px solid green;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+}
+
+.btn-group .button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+.btn-group .button:hover {
+  background-color: #3e8e41;
 }
 
 }
