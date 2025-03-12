@@ -1,47 +1,115 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-     <style>
-      body{background-color:#124017;}
-      h1 {display:block; text-align:left;}
-       h1,h2,h3{text-color:#AFA712;}
-       
-      </style>
-    <title>KATHETRO CATERING</title>\
-      <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
- 
-      </nav>
-  </head>
+ < head>
+   <meta charset="UTF-8">
+   <meta name="viewport"
+     content="width=device-width,initial-scale=1.0">
+   <tittle>KATHETRO</tittle>
+   <link rel="stylesheet"href="styles.css">
+   <style>
+     body{
+       background-color:#104208;
+       color:#646707;
+       font family:Arial,sans-serif;
+       margin:0
+       dispay:flex;
+       min-height;100vh;
+       flex-direction:column;
+     }
+     h1,h2{
+       text-align:center;}
+     .container{
+       display:flex;
+       flex:1;
+       padding: 20px:
+     }
+     .buttons{
+       flex:1;
+       diaplay:flex;
+       flex-direction:column;
+       justify-content:center;
+     }
+     .btn{
+       dislay:block;
+       background-color:#104208;
+       color:white;
+       padding: 15px;
+       border:none;
+       border-radius:10px;
+       curser:pointer;
+       text-align:left;
+       font-size: 16px;
+       margin: 10px;
+       text-decoration:none;
+       position:relative;
+       overflow:hidden;
+     }
+     .btn img{
+       width:100px
+         height:100px
+         object fit:cover;
+       border-radius:5px;
+     }
+     .slideshow img{
+       width:100%
+       height:auto;
+       border-radius: 5px;
+     }
+     .slideshow img.active{
+       display:block;}
+     
+     .footer{
+       backgroun-color:#0e3c0e;
+       color:#999324;
+       text-Align:center;
+       padding:5px;
+     }
+     {
+     .container{flex-direction:coloumn;}
+     .button{
+       margin-bottom:20px;}
+     
+     .slideshow{
+       margin-left:0;}
+     }
+     </style>
+   </head>
   <body>
-    <h1>KATHETRO CATERING COMPANY</h1>
-    <P>Where our catering bliss is sealed with a kiss</P>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <nav>
-        <a href="index.html">Home</a>|
-        <a href="Menu.html">menu</a>|
-        <a href="Event.html">Events</a>|
-        <a href="contact.html">contact</a>
-    
-    <section class="buttons">
-    <div class="buttons">
-      
-      <a href="Menu.html"class="-btn"
-  <img src="https://th.bing.com/th/id/OIP.9V_IdajO34lVzasE_Dyd9QHaEo?rs=1&pid=ImgDetMain.jpg" alt=" Food and Drinks"="width:100%">
-  <button class="btn">Food and Drinks</button>
-      </a>
-      
-        <a href="Events.html"class="btn"
-      <img src="https://th.bing.com/th/id/OIP.v5nkXHeFHbFR8aGGthXbcwHaE8?w=275&h=184&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt=" Events"="width:100%">
-  <button class="btn">Events</button>
-        </a>
-</div>
-    </section>
-    <footer>
-      <p>&copy;2025 KATHETRO CATERING.
-      All Rights Reserved</p>
-    </footer>
-  </body>
-  </html>
+    <h1> WELCOME TO KATHETRO</h1>
+    <h2>Where our catering bliss,is sealed with a kiss</h2>
+    <div class="container">
+      <div class="button">
+        <a href="menu.html"class="btn"
+          <img src=".jpg" alt="Food and Drinks"/>Food and Drinks</a>
+
+         <a href="Events.html"class="btn"
+          <img src=".jpg" alt="Packages and Offers"/>Packages and Offers</a>
+
+         <a href="contacts.html"class="btn"
+          <img src=".jpg" alt="Contact Us"/>Contact Us</a>
+      </div>
+      <div class="slideshow">
+        <img src=".jpg" alt="slide show 1"/>
+        <img src=".jpg" alt="slideshoe2"/>
+         <img src=".jpg" alt="slideshoe3"/>
+        </div>
+    </div>
+    <div class="footer">
+      &copy;2025 KATHETRO CATERING COMPANY.
+      All Rights Reserved.
+    </div>
+    <script>
+    //JavaScripet for Slideshow let currentSlide=0;
+    const slides=document.querySelectAll('.Slideshow img');
+    function showSlide(index) {
+    slide.forEach((slide, i)=>{slide.class-list.toggle('active'i===index);
+    });
+    }
+    fuction nextSlide() {
+    currentSlide=(currentSlide+1)%slides.length;showSlide(currentSlide);}
+    //change slide every 5 seconds
+    setInterval(nextSlide,5000);
+  </script>
+        </body>
+</html>
+  
