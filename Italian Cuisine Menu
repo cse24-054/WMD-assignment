@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italian Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Our Italian Menu</h1>
+    </header>
 
+    <section class="menu">
+        <h2>Starters</h2>
+        <div class="menu-row">
+            <div class="menu-item">
+                <img src="bruschetta.jpg" alt="Bruschetta">
+                <p>Bruschetta</p>
+            </div>
+            <div class="menu-item">
+                <img src="caprese.jpg" alt="Caprese Salad">
+                <p>Caprese Salad</p>
+            </div>
+            <div class="menu-item">
+                <img src="focaccia.jpg" alt="Focaccia">
+                <p>Focaccia</p>
+            </div>
+        </div>
+
+        <h2>Main Dishes</h2>
+        <div class="menu-row">
+            <div class="menu-item">
+                <img src="pizza-margherita.jpg" alt="Pizza Margherita">
+                <p>Pizza Margherita</p>
+            </div>
+            <div class="menu-item">
+                <img src="lasagna.jpg" alt="Lasagna">
+                <p>Lasagna</p>
+            </div>
+            <div class="menu-item">
+                <img src="risotto.jpg" alt="Risotto">
+                <p>Risotto</p>
+            </div>
+        </div>
+
+        <h2>Desserts</h2>
+        <div class="menu-row">
+            <div class="menu-item">
+                <img src="tiramisu.jpg" alt="Tiramisu">
+                <p>Tiramisu</p>
+            </div>
+            <div class="menu-item">
+                <img src="panna-cotta.jpg" alt="Panna Cotta">
+                <p>Panna Cotta</p>
+            </div>
+            <div class="menu-item">
+                <img src="cannoli.jpg" alt="Cannoli">
+                <p>Cannoli</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Delicious Italian Restaurant</p>
+    </footer>
+</body>
+</html>
