@@ -16,55 +16,22 @@ h1,h2{color:#082506;
       margin:0;
 
      }
-.welcome{
-  text-align:center;
-  padding:40px 20px;}
-.button{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  margin:20px 0;
+.button {
+  background-color:082506; /* Green */
+  border:#B0903D;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 40px;
+  margin: 4px 2px;
+  cursor: pointer;
+  ;
 }
-.buttons{
-  background:#132C15;
-  border:1px solid##907022;
-  border-radius: 5px;
-  padding:20px
-  margin:10px
-  text-align:center;
-  width:250px
-  transition:box-shadow0.3s;
-  cursor:pointer;}
-.Menu {
-  max-width:600px;
-  margin:auto;
-}
-.menu-button,.sub-menu-button{
-  background-color:#4CAF50;
-  color:white
-  padding: 10px;
-  border:none;
-  border-radius:5px;
-  cursor:ponter;
-  width:100%
-  text-align:left;
-  font-size: 16px;
-  margin: 5px 0;
-}
-.menu-button:hover,.sub-menu-button:hover{
-  dispay:none
-  padding:10px;
-  border-radius:5px;
-  background-color: #fff;
-  margin: 5px 0 10px 0;
-}
-.menu-content ul,.sub-menu-content ul{
-  list-style-type:none;
-  padding:0;
-}
-.menu-content img,.sub-menu-content img{
-  width:200px;
-  height:195px;
-  display:block;
-  margin:5px 0;
+
+
+
+
+
 }
