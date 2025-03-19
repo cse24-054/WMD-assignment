@@ -1,9 +1,8 @@
 
 body{
-  front-family:Arial,sans-serif;
-  margin:0
-  padding:0
-  background-color: #082506;
+  font-family:Arial,sans-serif;
+  background-color:#082506;
+  border:none;
 }
 header{
   background-color: #b0903d;
