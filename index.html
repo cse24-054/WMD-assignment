@@ -32,17 +32,18 @@ Lucida Handwriting,cursive;
        text-Align:center;
        padding:5px;
      }
-    * {box-sizing: border-box;}
+  
+    <style>
+* {box-sizing: border-box;}
 body {font-family: Verdana, sans-serif;}
 .mySlides {display: none;}
-img {horizontal-align: middle;
-  width:65%;}
+img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 65%;
-  position: center;
-  margin-left: auto;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
 }
 
 /* Caption text */
@@ -80,52 +81,26 @@ img {horizontal-align: middle;
   background-color: #717171;
 }
 
+/* Fading animation */
+.fade {
+  animation-name:none;
+  animation-duration: 1.5s;
+}
 
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
-}
+} 
+
+
+
   
 
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-}
-
-.container img {
-  width: 185px;
-  height: 186px;
-  margin-left:1000px
- display:block;
-  
-}
-   
-
-.container .btn {
-;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: #f1f1f1;
-  color: black;
-  font-size: 10px;
-  padding: 16px 30px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  text-align: center;
-  margin-left:1000px;
-  
-}
-
-.container .btn:hover {
-  background-color: black;
-  color: white;
-}
 
 </style>
    </head>
@@ -143,37 +118,23 @@ img {horizontal-align: middle;
         <a href="contact.html">contact</a>
      
       </nav>
-    </header>
-     <div class="container">
-   <button class="btn">EVENTS</button>
+    
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://th.bing.com/th/id/OIP.AUD0mokgroXSpPCNn6enXAHaEK?w=1920&h=1080&rs=1&pid=ImgDetMain.jpg" style="width:100%">
+  <div class="text">Delicious dishes</div>
 </div>
 
-<div class="container">
-  <button class="btn">FOOD AND DRINKS</button>
- 
- 
- </div>
-
-<div class="container">
- <button class="btn">PACKAGES</button>
-  
-</div>
-   <div class="mySlides ">
-  <div class="numbertext">1 /3</div>
-    <img src="https://th.bing.com/th/id/OIP.gBMNIIvAaKNVP9wlLHM9xwHaHa?rs=1&pid=ImgDetMain.jpg" style="width:500px,height:500px">
-  <div class="text">Caption Text</div>
-</div>
-
-<div class="mySlides ">
+<div class="mySlides fade">
   <div class="numbertext">2 / 3</div>
-  <img src="https://th.bing.com/th/id/OIP.4PKS2_RBBJLhE7ttUn9KSgHaEK?rs=1&pid=ImgDetMain.jpg" style="width:500px,height:500px">
-  <div class="text">Caption Two</div>
+  <img src="https://images.unsplash.com/photo-1571163940357-8b2ede0bf787?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDEwOXx8RmVhc3R8ZW58MHx8fHwxNjY5MTU3MjU2&ixlib=rb-4.0.3&q=80&w=2000.jpg" style="width:100%">
+  <div class="text">tastey drinks</div>
 </div>
 
-<div class="mySlides ">
+<div class="mySlides fade">
   <div class="numbertext">3 / 3</div>
-  <img src="https://www.cookedgoosecatering.com/wp-content/uploads/2021/07/callout-69.jpg.jpg" style="width:500px,height:500px">
-  <div class="text">Caption Three</div>
+  <img src="https://th.bing.com/th/id/OIP.PqtdATb7mls_ah3sjyXG6AHaLJ?pid=ImgDet&w=191&h=287&c=7.jpg" style="width:100%">
+  <div class="text">Sweet tooth pleasers</div>
 </div>
 
 </div>
@@ -206,10 +167,8 @@ function showSlides() {
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 </script>
-<div class="footer">
-      &copy;2025 KATHETRO CATERING COMPANY.
-      All Rights Reserved.
-    </div>
+
+
     </body>
 </html>
   
