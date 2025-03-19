@@ -3,11 +3,11 @@ body{
   front-family:Arial,sans-serif;
   margin:0
   padding:0
-  background-color:#082506;
+  background-color: #082506;
 }
 header{
-  background-color:#B0903D;
-  color:#B0903D;
+  background-color: #B0903D;
+  color: #B0903D;
   text-align:center;
   padding: 60px 20px;
 }
