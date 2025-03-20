@@ -23,6 +23,9 @@ h2{color:#b0903d;
       front-size: 3.5em;
       margin:0
       text-align-left;}
+header nav a{
+  font-size=2rem;
+}
 p{text-color:#f1f5f7;}
 .button {
   background-color:082506; /* Green */
