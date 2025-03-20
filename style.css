@@ -22,8 +22,9 @@ color:#082506;
      }
 h2{color:#b0903d;
       front-size: 3.5em;
-      margin:0
-      text-align-left;}
+      margin:10px;
+      text-align-left;
+  }
  nav a{
   font-size:2rem;
   margin:10px;
