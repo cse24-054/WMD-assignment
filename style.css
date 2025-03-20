@@ -3,8 +3,10 @@ body{
   font-family:Arial
 Verdana
 Helvetica,Sans-serif;
-  background-color: #082506;
+
   border:none;
+   background-image: url('https://wallpaperaccess.com/full/5600212.jpg');
+         background-size: cover;
 }
 header{
   background-color: #b0903d;
