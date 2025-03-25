@@ -25,11 +25,11 @@ h2{color:#b0903d;
   margin:10px;
    color:#ffffff;
 }
-p{text-color:##b0903d;}
+p{text-color:#b0903d;}
+
 .button {
-  background-color:082506; /* Green */
-  border:#B0903D;
-  color: black;
+  background-color:#B0903D;
+  color:#102f13;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
