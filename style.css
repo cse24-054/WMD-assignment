@@ -8,22 +8,17 @@ Helvetica,Sans-serif;
    background-image: url('https://wallpaperaccess.com/full/5600212.jpg');
          background-size: cover;
 }
-header{
-  background-color: #b0903d;
-  color: #082506;
-  text-align:center;
-  padding: 40px 10px;
-}
+
 h1{
-color:#082506;
-      font-size: 2rem;
+color:#b0903d;
+      font-size: 3rem;
       margin:0
-      text-align-left;
+      text-align:center;
      }
 h2{color:#b0903d;
-      front-size: 2rem;
+      front-size: 3rem;
       margin:10px;
-      text-align-left;
+      text-align:left;
   }
  nav a{
   font-size:1rem;
