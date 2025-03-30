@@ -54,75 +54,9 @@ Lucida Handwriting;
          padding: 2rem;
          margin: 1rem;
       }
-     * {
-      box-sizing: border-box;
-    }
-
-    /* Gallery container */
-    .gallery {
-      display: grid;
-       flex:horizontal;
-      grid-template-columns: repeat(3, 1fr(200px, 1fr)); /* Automatically fills the rows */
-      gap: 20px; /* Space between items */
-      padding: 20px;
-      grid-auto-rows: 200px; /* Set a fixed row height for a consistent grid */
-    }
-
-    /* Individual gallery item */
-    .gallery .item {
-      background-color: #f0f0f0;
-      padding: 10px;
-      text-align: center;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      transition: transform 0.3s;
-    }
-
-    .gallery .item:hover {
-      transform: scale(1.05); /* Slight zoom effect on hover */
-    }
-
-    .gallery img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* Ensures the image fills the space without distortion */
-      border-radius: 8px;
-    }
-
-    .desc {
-      margin-top: 10px;
-      font-size: 16px;
-      color: #B0903D;
-    }
-
-    /* Responsive grid for smaller screens */
-    @media only screen and (max-width: 700px) {
-      .gallery {
-        grid-template-row: repeat(auto-fill, minmax(150px, 1fr)); /* Fewer columns on smaller screens */
-      }
-    }
-
-    @media only screen and (max-width: 500px) {
-      .gallery {
-        grid-template-columns: 1fr; /* Single column layout on very small screens */
-      }
-    }
-
-    /* Optional: Styling for header */
-    header {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    header h1 {
-      font-size: 36px;
-      color: #B0903D;
-    }
-
-    header h2 {
-      font-size: 18px;
-      color:#B0903D ;
-    }
+ 
+    
+  
   </style>
    <link rel="stylesheet" href="styles.css"> <!-- Make sure the path is correct -->
 </head>
@@ -139,51 +73,8 @@ Lucida Handwriting;
         
           </nav>
    </header>
-   <div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img_5terre.jpg">
-      <img src="https://th.bing.com/th/id/OIP.3Qp0Et423fx5M2plsnYbUwHaE7?w=260&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="pasta" width="600" height="400">
-    </a>
-    <div class="desc">delicious totatoe source pasta</div>
-  </div>
-</div>
-
-
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img_forest.jpg">
-      <img src="https://th.bing.com/th/id/OIP.3Qp0Et423fx5M2plsnYbUwHaE7?w=260&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Forest" width="600" height="400">
-    </a>
-    <div class="desc">Add a description of the image here</div>
-  </div>
-</div>
-
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img_lights.jpg">
-      <img src="https://th.bing.com/th/id/OIP.3Qp0Et423fx5M2plsnYbUwHaE7?w=260&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Northern Lights" width="600" height="400">
-    </a>
-    <div class="desc">Add a description of the image here</div>
-  </div>
-</div>
-
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img_mountains.jpg">
-      <img src="https://th.bing.com/th/id/OIP.3Qp0Et423fx5M2plsnYbUwHaE7?w=260&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Mountains" width="600" height="400">
-    </a>
-    <div class="desc">Add a description of the image here</div>
-  </div>
-</div>
-
-<div class="clearfix"></div>
-
-<div style="padding:6px;">
-  <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
-</div>
-
    
-</body>
+   </body>
    
 </html>
   
