@@ -55,17 +55,18 @@ Lucida Handwriting;
          margin: 1rem;
       }
       gallery {
-         display:grid;
-         grid-template-columns:repeat(6,1fr);
-         grid-auto-rows:auto;
-         gap:20px;
+         display:flex;
+         flex-direction:row;
+         overflow-x:auto;
          padding:20px;
           }
       .gallery-item{
+         margin:10px;
          background-color:white;
          box-shadow:0 2px 5px rgba(0,0,0,0.2);
          overflow:hidden;
          border-radius:8px;
+         width:200px;
 
       }
       .gallery-item img{
