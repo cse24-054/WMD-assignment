@@ -54,46 +54,34 @@ Lucida Handwriting;
          padding: 2rem;
          margin: 1rem;
       }
-      .v-gallery {
-         width:185px;
-         hight:195px;
-         ovwerflow:hidden;
+      gallery {
+         display:grid;
+         grid-template-columns:repeat(6,1fr);
+         grid-auto-rows:auto;
+         gap:20px;
+         padding:20px;
+          }
+      .gallery-item{
+         background-color:white;
+         box-shadow:0 2px 5px rgba(0,0,0,0.2);
+         overflow:hidden;
+         border-radius:8px;
+
       }
-      .gallery-repeat{
-         display:flex;
-         animation:scroll 20s linear infinite;
-      }
-      .gallery-repeat img{
+      .gallery-item img{
          width:185px;
          height:195px;
          margin:15px;
-         display:inline;
+         display:block;
       }
-      figure{
-         margin:0;
-         width:100%;
-         text-align:center;
-      }
-      figcaption{
+      .gallery-item.descripton{
+        padding:10px;
          text-align:center;
          font-size:14px;
-         color:white;
-         background-color:rgba(0,0,0,0.5);
-         padding:5px;
-         margin-top-20px;
-         position:relative;
-         z-index:10;
+         color:#333;
       }
-      @keyframe scroll{
-         0%{transform:translateX(0);}
-      100%{transform:translateX(-50%);}
-      }
-         
-         
- 
-    
-  
-  </style>
+      
+</style>
    <link rel="stylesheet" href="styles.css"> <!-- Make sure the path is correct -->
 </head>
 <body>
@@ -114,16 +102,22 @@ Lucida Handwriting;
       
        <h2>starters</h2>
            
-         <div class="v-gallery">
-     <div class="gallery-repeat"id="gallery-repeat starters">
-       
-           <img src="https://th.bing.com/th/id/OIP.8rH138Rq-B5R8zWX8oUJaAHaFj?w=213&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="PLANE RICE">
-          <img src="https://th.bing.com/th/id/OIP.8rH138Rq-B5R8zWX8oUJaAHaFj?w=213&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="tasty menu">
-           <img src="https://th.bing.com/th/id/OIP.8rH138Rq-B5R8zWX8oUJaAHaFj?w=213&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="tasty menu">
-        <img src="https://th.bing.com/th/id/OIP.8rH138Rq-B5R8zWX8oUJaAHaFj?w=213&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="tasty menu">
-        </figure>
+         <div class="gallery">
+     <div class="gallery-item">
+       <img src="https://th.bing.com/th/id/OIP.8rH138Rq-B5R8zWX8oUJaAHaFj?w=213&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="item1">
+        <div class="Discription">FRIED RICE</div>
      </div>
-       </div>
+         <div class="gallery">
+     <div class="gallery-item">
+       <img src="https://th.bing.com/th/id/OIP.8rH138Rq-B5R8zWX8oUJaAHaFj?w=213&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="item2">
+        <div class="Discription">FRIED RICE</div>
+     </div>
+            
+         <div class="gallery">
+     <div class="gallery-item">
+       <img src="https://th.bing.com/th/id/OIP.8rH138Rq-B5R8zWX8oUJaAHaFj?w=213&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="item3">
+        <div class="Discription">FRIED RICE</div>
+     </div>   
    </body>
    
 </html>
