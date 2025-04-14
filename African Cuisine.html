@@ -54,33 +54,17 @@ Lucida Handwriting;
          padding: 2rem;
          margin: 1rem;
       }
-      gallery {
-         display:flex;
-         flex-direction:row;
-         overflow-x:auto;
-         padding:20px;
-          }
-      .gallery-item{
-         margin:10px;
-         background-color:white;
-         box-shadow:0 2px 5px rgba(0,0,0,0.2);
-         overflow:hidden;
-         border-radius:8px;
-         width:200px;
+     div.scroll-container {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
 
-      }
-      .gallery-item img{
-         width:185px;
-         height:195px;
-         margin:15px;
-         display:block;
-      }
-      .gallery-item.descripton{
-        padding:10px;
-         text-align:center;
-         font-size:14px;
-         color:#333;
-      }
+div.scroll-container img {
+  padding: 10px;
+} 
+      
       
 </style>
    <link rel="stylesheet" href="styles.css"> <!-- Make sure the path is correct -->
@@ -102,23 +86,85 @@ Lucida Handwriting;
     <main>
       
        <h2>starters</h2>
-           
-         <div class="gallery">
-     <div class="gallery-item">
-       <img src="https://th.bing.com/th/id/OIP.8rH138Rq-B5R8zWX8oUJaAHaFj?w=213&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="item1">
-        <div class="Discription">FRIED RICE</div>
-     </div>
-         <div class="gallery">
-     <div class="gallery-item">
-       <img src="https://th.bing.com/th/id/OIP.8rH138Rq-B5R8zWX8oUJaAHaFj?w=213&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="item2">
-        <div class="Discription">FRIED RICE</div>
-     </div>
-            
-         <div class="gallery">
-     <div class="gallery-item">
-       <img src="https://th.bing.com/th/id/OIP.8rH138Rq-B5R8zWX8oUJaAHaFj?w=213&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="item3">
-        <div class="Discription">FRIED RICE</div>
-     </div>   
+   <div class="scroll-container">
+      <img src="https://th.bing.com/th/id/OIP.fBe1gguUHhEyZuradl-J6QAAAA?w=291&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="PAP" width="600" height="400">
+      <p>PAP
+      <br>Buttered pap</br></p>
+      
+  <img src="https://th.bing.com/th/id/OIP.fBe1gguUHhEyZuradl-J6QAAAA?w=291&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="FUFU" width="600" height="400">
+      <p>Tasty Nigerian FUFU</p>
+      
+  <img src="https://th.bing.com/th/id/OIP.fBe1gguUHhEyZuradl-J6QAAAA?w=291&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="SAMP AND BEANS" width="600" height="400">
+      <p>Delicious samp and beans
+      <br>containing vegies</br>
+   <br>buttered samp</br></p>
+      
+      <img src="https://th.bing.com/th/id/OIP.fBe1gguUHhEyZuradl-J6QAAAA?w=291&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="SAMP AND BEANS" width="600" height="400">
+      <p>Delicious samp and beans
+      <br>containing vegies</br>
+   <br>buttered samp</br></p>
+      
+     <img src="https://th.bing.com/th/id/OIP.fBe1gguUHhEyZuradl-J6QAAAA?w=291&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="SAMP AND BEANS" width="600" height="400">
+      <p>Delicious samp and beans
+      <br>containing vegies</br>
+   <br>buttered samp</br></p> 
+      <img src="https://th.bing.com/th/id/OIP.fBe1gguUHhEyZuradl-J6QAAAA?w=291&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="PAP" width="600" height="400">
+      <p>PAP
+      <br>Buttered pap</br></p> 
+</div>
+        <div class="scroll-container">
+      <img src="https://th.bing.com/th/id/OIP.fBe1gguUHhEyZuradl-J6QAAAA?w=291&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="PAP" width="600" height="400">
+      <p>PAP
+      <br>Buttered pap</br></p>
+      
+  <img src="https://th.bing.com/th/id/OIP.fBe1gguUHhEyZuradl-J6QAAAA?w=291&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="FUFU" width="600" height="400">
+      <p>Tasty Nigerian FUFU</p>
+      
+  <img src="https://th.bing.com/th/id/OIP.fBe1gguUHhEyZuradl-J6QAAAA?w=291&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="SAMP AND BEANS" width="600" height="400">
+      <p>Delicious samp and beans
+      <br>containing vegies</br>
+   <br>buttered samp</br></p>
+      
+      <img src="https://th.bing.com/th/id/OIP.fBe1gguUHhEyZuradl-J6QAAAA?w=291&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="SAMP AND BEANS" width="600" height="400">
+      <p>Delicious samp and beans
+      <br>containing vegies</br>
+   <br>buttered samp</br></p>
+      
+     <img src="https://th.bing.com/th/id/OIP.fBe1gguUHhEyZuradl-J6QAAAA?w=291&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="SAMP AND BEANS" width="600" height="400">
+      <p>Delicious samp and beans
+      <br>containing vegies</br>
+   <br>buttered samp</br></p> 
+      <img src="https://th.bing.com/th/id/OIP.fBe1gguUHhEyZuradl-J6QAAAA?w=291&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="PAP" width="600" height="400">
+      <p>PAP
+      <br>Buttered pap</br></p> 
+</div>
+       <h2>SIDE DISHES</h2>
+        <div class="scroll-container">
+      <img src="https://th.bing.com/th/id/OIP.fBe1gguUHhEyZuradl-J6QAAAA?w=291&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="PAP" width="600" height="400">
+      <p>PAP
+      <br>Buttered pap</br></p>
+      
+  <img src="https://th.bing.com/th/id/OIP.fBe1gguUHhEyZuradl-J6QAAAA?w=291&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="FUFU" width="600" height="400">
+      <p>Tasty Nigerian FUFU</p>
+      
+  <img src="https://th.bing.com/th/id/OIP.fBe1gguUHhEyZuradl-J6QAAAA?w=291&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="SAMP AND BEANS" width="600" height="400">
+      <p>Delicious samp and beans
+      <br>containing vegies</br>
+   <br>buttered samp</br></p>
+      
+      <img src="https://th.bing.com/th/id/OIP.fBe1gguUHhEyZuradl-J6QAAAA?w=291&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="SAMP AND BEANS" width="600" height="400">
+      <p>Delicious samp and beans
+      <br>containing vegies</br>
+   <br>buttered samp</br></p>
+      
+     <img src="https://th.bing.com/th/id/OIP.fBe1gguUHhEyZuradl-J6QAAAA?w=291&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="SAMP AND BEANS" width="600" height="400">
+      <p>Delicious samp and beans
+      <br>containing vegies</br>
+   <br>buttered samp</br></p> 
+      <img src="https://th.bing.com/th/id/OIP.fBe1gguUHhEyZuradl-J6QAAAA?w=291&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="PAP" width="600" height="400">
+      <p>PAP
+      <br>Buttered pap</br></p> 
+</div>
    </body>
    
 </html>
