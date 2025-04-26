@@ -39,6 +39,26 @@ p{text-color:#b0903d;}
   cursor: pointer;
   
 }
+.container {
+  display:flex;
+  flex-wrap:wrap;
+  padding:1rem;
+  gap:1rem;
+}
+.content{
+  flex:3;
+  min-width:250px;
+}
+.sidebar {
+  flex:1;
+  minw-width:200px;
+}
+@media(max-width:768px)
+{.container{flex-direction:coloumn;}
+ nav ul{flex-direction:coloumn;
+       }
+}
+  
 
 
   
