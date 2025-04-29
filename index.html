@@ -72,7 +72,65 @@ Lucida Handwriting;
          <a href="contact.html">Contact</a>
       </nav>
    </header>
-  
+   <div> style="dispay:flex; justify-content:flex-end;align-items:cemter,padding: 20px;gap:10px;">
+      <input type="text" id="searchInput" placeholder="search..." style="padding: 10px;width:250px;"/>
+      <button onclick="starDiction()" style="padding: 10px;">
+         <imgsrc="https://thaka.bing.com/th/id/OIP.GHRl3_Nt8aguci_ztL0v7gHaHa?w=188&h=187&c=7&r=0&o=5&dpr=1.5&pid=1.7.png" alt="Mic"/>
+      </button>
+   </div>
+   <div> style="dispay:flex; justify-content:flex-end;align-items:cemter,padding: 20px;gap:10px;">
+      <select id="languageSelect" onchange="updatePlaceholder()" style="padding: 8px;">
+         <option value="en-US">English</option>
+         <option value="es-ES">Espaol</option>
+         <option value="fr-FR">French</option>
+         <option value="de-DE">Dutsch</option>
+         <option value="zh-CN">Chinese</option>
+      </select>
+      <input type="text" id="searchInput" aria-label="Search" Placeholder="search..." style="padding:10px;width:250px"/>
+      <button onclick="starDiction()" style="padding: 10px;">
+         <img src=""https://thaka.bing.com/th/id/OIP.GHRl3_Nt8aguci_ztL0v7gHaHa?w=188&h=187&c=7&r=0&o=5&dpr=1.5&pid=1.7.png" alt="Mic"/>
+      </button>
+   </div>
+  <script>
+function startDictation() {
+  if ('webkitSpeechRecognition' in window) {
+    const recognition = new webkitSpeechRecognition();
+    const selectedLang = document.getElementById('languageSelect').value;
+
+    recognition.lang = selectedLang;
+    recognition.continuous = false;
+    recognition.interimResults = false;
+
+    recognition.start();
+
+    recognition.onresult = function(event) {
+      document.getElementById('searchInput').value = event.results[0][0].transcript;
+      recognition.stop();
+    };
+
+    recognition.onerror = function() {
+      recognition.stop();
+    };
+  } else {
+    alert("Speech recognition is not supported in this browser.");
+  }
+}
+
+function updatePlaceholder() {
+  const lang = document.getElementById('languageSelect').value;
+  const input = document.getElementById('searchInput');
+
+  const placeholders = {
+    "en-US": "Search...",
+    "es-ES": "Buscar...",
+    "fr-FR": "Chercher...",
+    "de-DE": "Suchen...",
+    "zh-CN": "搜索..."
+  };
+
+  input.placeholder = placeholders[lang] || "Search...";
+}
+</script>
    
 </body>
    
