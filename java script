@@ -1,0 +1,70 @@
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('search-input');
+  const voiceSearchBtn = document.getElementById('voice-search');
+  const searchForm = document.querySelector('form[role="search"]');
+  
+  // Voice search functionality
+  if ('webkitSpeechRecognition' in window) {
+    const recognition = new webkitSpeechRecognition();
+    recognition.continuous = false;
+    recognition.interimResults = false;
+    
+    voiceSearchBtn.addEventListener('click', function() {
+      try {
+        recognition.start();
+        searchInput.placeholder = 'Listening...';
+        voiceSearchBtn.setAttribute('aria-label', 'Listening for voice input');
+      } catch (error) {
+        console.error('Voice recognition error:', error);
+      }
+    });
+    
+    recognition.onresult = function(event) {
+      const transcript = event.results[0][0].transcript;
+      searchInput.value = transcript;
+      searchInput.placeholder = 'Search menus, services...';
+      voiceSearchBtn.setAttribute('aria-label', 'Voice search');
+      // Optionally submit the form automatically
+      // searchForm.submit();
+    };
+    
+    recognition.onerror = function(event) {
+      searchInput.placeholder = 'Search menus, services...';
+      voiceSearchBtn.setAttribute('aria-label', 'Voice search');
+    };
+    
+    recognition.onend = function() {
+      searchInput.placeholder = 'Search menus, services...';
+      voiceSearchBtn.setAttribute('aria-label', 'Voice search');
+    };
+  } else {
+    voiceSearchBtn.style.display = 'none';
+  }
+  
+  // Keyboard navigation
+  searchInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      performSearch();
+    } else if (e.key === 'Escape') {
+      searchInput.value = '';
+    }
+  });
+  
+  // Search function
+  function performSearch() {
+    const searchTerm = searchInput.value.trim();
+    if (searchTerm) {
+      // Implement your search navigation logic here
+      // For example, redirect to a search results page:
+      window.location.href = `/search?q=${encodeURIComponent(searchTerm)}`;
+      
+      // Or if you're using a SPA approach:
+      // navigateToSearchResults(searchTerm);
+    }
+  }
+  
+  // Make the search bar discoverable via keyboard (Tab navigation)
+  searchInput.setAttribute('tabindex', '0');
+  voiceSearchBtn.setAttribute('tabindex', '0');
+});
