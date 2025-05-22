@@ -27,15 +27,7 @@ Lucida Handwriting;
          font-size:6rem;
           }
 
-      .container {
-         display: flex;
-         flex: 1;
-         padding: 20px;
-      }
-      a{
-         color:#B0903D;
-      }
-
+      
       .footer {
         
          text-color:#B0903D ;
@@ -44,26 +36,7 @@ Lucida Handwriting;
          float:bottom;
       }
 
-      .btn {
-         display: flex;
-         justify-content: space-between;
-      }
-
-      button {
-         height: 100px;
-         padding: 2rem;
-         margin: 1rem;
-      }
-     div.scroll-container {
-  background-color: #333;
-  overflow: auto;
-  white-space: nowrap;
-  padding: 10px;
-}
-
-div.scroll-container img {
-  padding: 10px;
-} 
+     
       
       
 </style>
@@ -84,18 +57,58 @@ div.scroll-container img {
    </header>
    
     <main>
+      <section class="menu-section" aria-labelledby="menu-heading">
+  <h2 id="menu-heading">Our Catering Menu</h2>
+  <div class="menu-grid" role="grid">
+    <!-- Row 1 -->
+    <div class="menu-row" role="row">
+      <div class="menu-item" role="gridcell">
+        <img src="images/appetizers/bruschetta.jpg" alt="Fresh bruschetta with tomatoes and basil" loading="lazy">
+        <h3 class="food-name">Bruschetta</h3>
+      </div>
+      <div class="menu-item" role="gridcell">
+        <img src=".jpg" alt="Crispy vegetable spring rolls with dipping sauce" loading="lazy">
+        <h3 class="food-name">Spring Rolls</h3>
+      </div>
+      <!-- Add 3 more items in row 1 -->
+    </div>
+    
+    <!-- Row 2 -->
+    <div class="menu-row" role="row">
+      <div class="menu-item" role="gridcell">
+        <img src="images/main-courses/salmon.jpg" alt="Grilled salmon with lemon butter sauce" loading="lazy">
+        <h3 class="food-name">Grilled Salmon</h3>
+      </div>
+      <div class="menu-item" role="gridcell">
+        <img src="images/main-courses/beef-wellington.jpg" alt="Beef Wellington with mushroom duxelles" loading="lazy">
+        <h3 class="food-name">Beef Wellington</h3>
+      </div>
+      <!-- Add 3 more items in row 2 -->
+        <div class="menu-row" role="row">
+      <div class="menu-item" role="gridcell">
+        <img src="images/main-courses/salmon.jpg" alt="Grilled salmon with lemon butter sauce" loading="lazy">
+        <h3 class="food-name">Grilled Salmon</h3>
+      </div>
+      <div class="menu-item" role="gridcell">
+        <img src="images/main-courses/beef-wellington.jpg" alt="Beef Wellington with mushroom duxelles" loading="lazy">
+        <h3 class="food-name">Beef Wellington</h3>
+      </div>
+           <div class="menu-row" role="row">
+      <div class="menu-item" role="gridcell">
+        <img src="images/main-courses/salmon.jpg" alt="Grilled salmon with lemon butter sauce" loading="lazy">
+        <h3 class="food-name">Grilled Salmon</h3>
+      </div>
+      <div class="menu-item" role="gridcell">
+        <img src="images/main-courses/beef-wellington.jpg" alt="Beef Wellington with mushroom duxelles" loading="lazy">
+        <h3 class="food-name">Beef Wellington</h3>
+      </div> 
+    </div>
+    
+    <!-- Rows 3 and 4 would follow the same pattern -->
+  </div>
+</section> 
       
-       <h2>starters</h2>
-        <div class="scroll-container">
-  <img src="https://ts1.mm.bing.net/th?id=OIP.waoy3qBJWmNQvYkbiuMDewHaE8&pid=15.1.jpg" alt="Cuisines" width="300" height="285"><P>DELICIOUS FOOD</P>
-  <img src="https://th.bing.com/th/id/OIP.69okGrOf8ZZlEsyIWMp10wHaE5?w=255&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="African delicacies" width="300" height="285"><P>TASTY FOOD</P>
-  <img src="https://th.bing.com/th/id/OIP.WwALUrLEXNZbyUN8d24HPQHaE8?w=243&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Northern Lights" width="300" height="285"><P>TASTY</P>
-  <img src="https://th.bing.com/th/id/OIP.HdzzQdKa8ozUTG7HH0NLUQHaEw?w=271&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Mountains" width="300" height="285">
-  <img src="https://th.bing.com/th/id/OIP.Xkmzez6u196HK7mUGmLlZQHaE5?w=231&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Cuisines" width="300" height="285">
-  <img src="https://th.bing.com/th/id/OIP.TwbLy3Nxzhz6OkCfWIBzwgHaE8?w=268&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="African delicacies" width="300" height="285">
-  <img src="https://th.bing.com/th/id/OIP.gPXrA_33lMJX3dHkBVXVagHaE8?w=277&h=185&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Northern Lights" width="300" height="285">
-  <img src="https://th.bing.com/th/id/OIP.KSXYH0H6ahmtMECS3Y44CAHaNK?w=115&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Mountains" width="300" height="285">
-  
+ 
    </body>
    
 </html>
