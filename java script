@@ -68,3 +68,46 @@ document.addEventListener('DOMContentLoaded', function() {
   searchInput.setAttribute('tabindex', '0');
   voiceSearchBtn.setAttribute('tabindex', '0');
 });
+document.addEventListener('DOMContentLoaded', function() {
+  const searchForm = document.querySelector('form[role="search"]');
+  const searchInput = document.getElementById('search-input');
+
+  searchForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const searchTerm = searchInput.value.trim().toLowerCase();
+    
+    // Define keywords for each page
+    const pageKeywords = {
+      'Menu.html': ['menu', 'food', 'dishes', 'meals', 'catering menu'],
+      'Event.html': ['events', 'event', 'booking', 'wedding', 'party'],
+      'contact.xml': ['contact', 'reach us', 'email', 'phone', 'location'],
+      'index.html': ['home', 'main', 'welcome']
+    };
+
+    // Find the best matching page
+    let bestMatch = null;
+    let maxMatches = 0;
+
+    for (const [page, keywords] of Object.entries(pageKeywords)) {
+      const matches = keywords.filter(keyword => 
+        searchTerm.includes(keyword)
+      ).length;
+      
+      if (matches > maxMatches) {
+        maxMatches = matches;
+        bestMatch = page;
+      }
+    }
+
+    // Navigate to the best matching page or search results
+    if (bestMatch && maxMatches > 0) {
+      window.location.href = bestMatch;
+    } else {
+      window.location.href = `search-results.html?q=${encodeURIComponent(searchTerm)}`;
+    }
+  });
+});
+
+  
+    
