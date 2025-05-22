@@ -150,7 +150,7 @@ menu-section {
 
 .menu-grid {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 2rem;
 }
 
@@ -162,7 +162,7 @@ menu-section {
 
 .menu-item {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   background: #fff;
   border-radius: 8px;
