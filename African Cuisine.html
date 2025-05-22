@@ -21,7 +21,7 @@ Lucida Handwriting;
          image-align:center;
      
       }
-      h2 id{color:#B0903D;}
+    
    
       h1 h2 {
          text-align: left;
@@ -30,19 +30,55 @@ Lucida Handwriting;
        a{
          color:#B0903D;
       }
+      .menu-container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+        h1 {
+            color:#B0903D;
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #f1f1f1;
+            padding-bottom: 15px;
+        }
+        h2 {
+            color:#B0903D;
+            font-size: 22px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        .menu-section {
+            margin-bottom: 25px;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px dashed:#B0903D;
+        }
+        .item-name {
+            font-weight: 600;
+            color:#FFFEFC;
+        }
+        .item-price {
+            color:#FFFEFC;
+            font-weight: bold;
+        }
+        .divider {
+            height: 1px;
+            background-color: #f1f1f1;
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: # #B0903D;
+            font-size: 14px;
+        }
 
-      
-      .footer {
-        
-         text-color:#B0903D ;
-         text-align: center;
-         padding: 5px;
-         float:bottom;
-      }
-
-     
-      
-      
 </style>
    <link rel="stylesheet" href="Menustyles.css"> <!-- Make sure the path is correct -->
 </head>
@@ -59,141 +95,94 @@ Lucida Handwriting;
         
           </nav>
    </header>
-   
-    <main>
-      <section class="menu-section" aria-labelledby="menu-heading">
-  <h2 id="menu-heading">Our Catering Menu</h2>
-  <div class="menu-grid" role="grid">
-    <!-- Row 1 -->
-    <div class="menu-row" role="row">
-       
-      <div class="menu-item" role="gridcell">
-        <img src="https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Fresh bruschetta with tomatoes and basil"sizes=(max-width:600px)45vw,(max-width:1024px)30vw,18vw" loading="lazy">
-        <h3 class="food-name">Bruschetta</h3>
-      </div>
-      <div class="menu-item" role="gridcell">
-        <img src="https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Crispy vegetable spring rolls with dipping sauce"sizes=(max-width:600px)45vw,(max-width:1024px)30vw,18vw" loading="lazy">
-        <h3 class="food-name">Spring Rolls</h3>
-      </div>
-        <div class="menu-item" role="gridcell">
-        <img src="https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Crispy vegetable spring rolls with dipping sauce"sizes=(max-width:600px)45vw,(max-width:1024px)30vw,18vw" loading="lazy">
-        <h3 class="food-name">Spring Rolls</h3>
-      </div>
-        <div class="menu-item" role="gridcell">
-        <img src="https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Crispy vegetable spring rolls with dipping sauce"sizes=(max-width:600px)45vw,(max-width:1024px)30vw,18vw" loading="lazy">
-        <h3 class="food-name">Spring Rolls</h3>
-      </div>
-        <div class="menu-item" role="gridcell">
-        <img src="https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Crispy vegetable spring rolls with dipping sauce"sizes=(max-width:600px)45vw,(max-width:1024px)30vw,18vw" loading="lazy">
-        <h3 class="food-name">Spring Rolls</h3>
-      </div>
-      
-   
-    
-    <!-- Row 2 -->
-    <div class="menu-row" role="row">
-       
-      <div class="menu-item" role="gridcell">
-        <img src="https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Grilled salmon with lemon butter sauce"sizes=(max-width:600px)45vw,(max-width:1024px)30vw,18vw" loading="lazy">
-        <h3 class="food-name">Grilled Salmon</h3>
-      </div>
-       
-      <div class="menu-item" role="gridcell">
-        <img src="https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Beef Wellington with mushroom duxelles"sizes=(max-width:600px)45vw,(max-width:1024px)30vw,18vw" loading="lazy">
-        <h3 class="food-name">Beef Wellington</h3>
-      </div>
-        <div class="menu-item" role="gridcell">
-        <img src="https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Beef Wellington with mushroom duxelles"sizes=(max-width:600px)45vw,(max-width:1024px)30vw,18vw" loading="lazy">
-        <h3 class="food-name">Beef Wellington</h3>
-      </div>
-        <div class="menu-item" role="gridcell">
-        <img src="https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Beef Wellington with mushroom duxelles"sizes=(max-width:600px)45vw,(max-width:1024px)30vw,18vw" loading="lazy">
-        <h3 class="food-name">Beef Wellington</h3>
-      </div>
-        <div class="menu-item" role="gridcell">
-        <img src="https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Beef Wellington with mushroom duxelles" sizes=(max-width:600px)45vw,(max-width:1024px)30vw,18vw"loading="lazy">
-        <h3 class="food-name">Beef Wellington</h3>
-      </div>
-       
-      <!-- Row 3 -->
-        <div class="menu-row" role="row">
-           
-      <div class="menu-item" role="gridcell">
-        <img src="https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Grilled salmon with lemon butter sauce"sizes=(max-width:600px)45vw,(max-width:1024px)30vw,18vw" loading="lazy">
-        <h3 class="food-name">Grilled Salmon</h3>
-      </div>
-      <div class="menu-item" role="gridcell">
-        <img src="https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Beef Wellington with mushroom duxelles"sizes=(max-width:600px)45vw,(max-width:1024px)30vw,18vw" loading="lazy">
-        <h3 class="food-name">Beef Wellington</h3>
-      </div>
-            <div class="menu-item" role="gridcell">
-        <img src="https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Beef Wellington with mushroom duxelles"sizes=(max-width:600px)45vw,(max-width:1024px)30vw,18vw" loading="lazy">
-        <h3 class="food-name">Beef Wellington</h3>
-      </div>
-            <div class="menu-item" role="gridcell">
-        <img src="https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Beef Wellington with mushroom duxelles"sizes=(max-width:600px)45vw,(max-width:1024px)30vw,18vw"loading="lazy">
-        <h3 class="food-name">Beef Wellington</h3>
-      </div>
-            <div class="menu-item" role="gridcell">
-        <img src="https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Beef Wellington with mushroom duxelles"sizes=(max-width:600px)45vw,(max-width:1024px)30vw,18vw" loading="lazy">
-        <h3 class="food-name">Beef Wellington</h3>
-      </div>
-
-           <!-- Row 4 -->
-           <div class="menu-row" role="row">
-              
-      <div class="menu-item" role="gridcell">
-        <img src="https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Grilled salmon with lemon butter sauce" loading="lazy">
-        <h3 class="food-name">Grilled Salmon</h3>
-      </div>
-              
-      <div class="menu-item" role="gridcell">
-        <img src="https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Beef Wellington with mushroom duxelles" loading="lazy">
-        <h3 class="food-name">Beef Wellington</h3>
-      </div>
-              
-        <div class="menu-item" role="gridcell">
-        <img src="https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Beef Wellington with mushroom duxelles" loading="lazy">
-        <h3 class="food-name">Beef Wellington</h3>
-      </div>       
-    
-     <div class="menu-item" role="gridcell">
-        <img src="https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Beef Wellington with mushroom duxelles" loading="lazy">
-        <h3 class="food-name">Beef Wellington</h3>
-      </div>
-              <div class="menu-item" role="gridcell">
-        <img src="https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Beef Wellington with mushroom duxelles" loading="lazy">
-        <h3 class="food-name">Beef Wellington</h3>
-      </div> 
-
-                       <div class="menu-row" role="row">
-              
-      <div class="menu-item" role="gridcell">
-        <img src="https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Grilled salmon with lemon butter sauce" loading="lazy">
-        <h3 class="food-name">Grilled Salmon</h3>
-      </div>
-              
-      <div class="menu-item" role="gridcell">
-        <img src="https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Beef Wellington with mushroom duxelles" loading="lazy">
-        <h3 class="food-name">Beef Wellington</h3>
-      </div>
-              
-        <div class="menu-item" role="gridcell">
-        <img src="https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Beef Wellington with mushroom duxelles" loading="lazy">
-        <h3 class="food-name">Beef Wellington</h3>
-      </div>       
-    
-     <div class="menu-item" role="gridcell">
-        <img src="https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Beef Wellington with mushroom duxelles" loading="lazy">
-        <h3 class="food-name">Beef Wellington</h3>
-      </div>
-              <div class="menu-item" role="gridcell">
-        <img src="https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Beef Wellington with mushroom duxelles" loading="lazy">
-        <h3 class="food-name">Beef Wellington</h3>
-      </div>   
+      <div class="menu-container">
+        <h1>FOOD MENU</h1>
+        
+        <div class="menu-section">
+            <h2>FOOD</h2>
+            <div class="menu-item">
+                <span class="item-name">Chicken Fried Rice</span>
+                <span class="item-price">$35</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Spicy Chicken</span>
+                <span class="item-price">$35</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Banma Noodle</span>
+                <span class="item-price">$35</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Tuna Sandwich</span>
+                <span class="item-price">$35</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Teriyaki Rice Bowl</span>
+                <span class="item-price">$35</span>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="menu-section">
+            <h2>SNACK</h2>
+            <div class="menu-item">
+                <span class="item-name">Potato Wedges</span>
+                <span class="item-price">$35</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Fried Fries</span>
+                <span class="item-price">$35</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Beef Burger</span>
+                <span class="item-price">$35</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Chicken Nuggets</span>
+                <span class="item-price">$35</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Teriyaki Rice Bowl</span>
+                <span class="item-price">$35</span>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="menu-section">
+            <h2>DRINK</h2>
+            <div class="menu-item">
+                <span class="item-name">Summer Sour</span>
+                <span class="item-price">$35</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Mineral Water</span>
+                <span class="item-price">$35</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Tropical Sweet</span>
+                <span class="item-price">$35</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Fresh Soda</span>
+                <span class="item-price">$35</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Teriyaki Rice Bowl</span>
+                <span class="item-price">$35</span>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Customizable Menu Template</p>
+        </div>
+    </div>
+</body>
+</html>
+ 
   
-</section> 
-      
+
  
    </body>
    
