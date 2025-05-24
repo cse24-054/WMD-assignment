@@ -155,6 +155,8 @@ div.scroll-container img {
     </button>
 </div>
     </header>
+    
+    
      <section class="Menu">
 <h2>KATHETRO MENU</h2>
 
@@ -172,6 +174,82 @@ div.scroll-container img {
     <P>Copyright@KATHETRO2025</P>
   </footer>   
 </div>
+      script>
+     document.addEventListener('DOMContentLoaded', function() {
+    const searchBar = document.getElementById('searchBar');
+    const searchButton = document.getElementById('searchButton');
+    const voiceButton = document.getElementById('voiceButton');
+   
+    // Page mappings
+    const pageMap = {
+        'home': 'index.html',
+        'menu': 'Menu.html',
+        'african': 'African-cuisine.html',
+        'african cuisine': 'African-cuisine.html',
+        'asian': 'Asian-cuisine.html',
+        'asian cuisine': 'Asian-cuisine.html',
+        'european': 'European-cuisine.html',
+        'european cuisine': 'European-cuisine.html',
+        'events': 'Event.html',
+        'contact': 'contact.html',
+        'contacts': 'contact.html'
+    };
+   
+    // Handle text search
+    function handleSearch() {
+        const query = searchBar.value.toLowerCase().trim();
+       
+        for (const [keyword, page] of Object.entries(pageMap)) {
+            if (query.includes(keyword)) {
+                window.location.href = page;
+                return;
+            }
+        }
+       
+        alert("Sorry, we couldn't find that page. Try searching for: Menu, African cuisine, Asian cuisine, European cuisine, Events, or contacts");
+    }
+   
+    searchButton.addEventListener('click', handleSearch);
+    searchBar.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            handleSearch();
+        }
+    });
+   
+    // Handle voice search
+    voiceButton.addEventListener('click', function() {
+        if ('webkitSpeechRecognition' in window) {
+            const recognition = new webkitSpeechRecognition();
+            recognition.continuous = false;
+            recognition.interimResults = false;
+           
+            recognition.onstart = function() {
+                searchBar.placeholder = "Listening...";
+            };
+           
+            recognition.onresult = function(event) {
+                const transcript = event.results[0][0].transcript.toLowerCase();
+                searchBar.value = transcript;
+                handleSearch();
+            };
+           
+            recognition.onerror = function(event) {
+                searchBar.placeholder = "Search pages... (e.g. Menu, African cuisine)";
+                console.error('Voice recognition error', event.error);
+            };
+           
+            recognition.onend = function() {
+                searchBar.placeholder = "Search pages... (e.g. Menu, African cuisine)";
+            };
+           
+            recognition.start();
+        } else {
+            alert("Voice search is not supported in your browser. Try Chrome or Edge.");
+        }
+    });
+});
+   
+   </script> 
 
   </body>
 </html>
