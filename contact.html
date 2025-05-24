@@ -54,66 +54,29 @@ Lucida Handwriting;
          padding: 2rem;
          margin: 1rem;
       }
-    .container {
-            max-width:100px;
-            margin-righ:white;
-            padding: 20px;
-            background:transparent;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        
-        h1 {
-            text-align:left;
-            color: #B0903D;
-            margin-bottom: 30px;
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        
-        .contact-item {
-            background: white;
-            border-radius: 8px;
-            padding: 20px;
-            text-align: left;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .contact-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .contact-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: #3498db;
-        }
-        
-        .contact-link {
-            display: inline;
-            margin-top: 10px;
-            padding: 8px 15px;
-            background:  #B0903D;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background 0.3s ease;
-        }
-        
-        .contact-link:hover {
-            background: #2980b9;
-        }
-        
-        @media (max-width: 600px) {
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+  .contact-container {
+      max-width: 800px;
+      margin-right:85%;
+      background: transparent;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .contact-item {
+      display: flex;
+      align-items: left;
+      margin: 15px 0;
+    }
+    .contact-item img {
+      width: 85px;
+       height:86px:
+      margin-right: 20px;
+    }
+    .contact-item a {
+      text-decoration: none;
+      color:white ;
+      font-size: 18px;
+    }
    </style>
    <link rel="stylesheet" href="styles.css"> <!-- Make sure the path is correct -->
 </head>
@@ -149,54 +112,26 @@ Lucida Handwriting;
       
    </header>
    <main>
-     <div class="container">
-        <h1>Get In Touch</h1>
-        
-        <div class="contact-grid">
-            <!-- Email -->
-            <div class="contact-item">
-                <div class="contact-icon">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <h3>Email</h3>
-                <p>Send me a message</p>
-                <a href="mailto:your.email@example.com" class="contact-link">Contact</a>
-            </div>
-            
-            <!-- Facebook -->
-            <div class="contact-item">
-                <div class="contact-icon">
-                    <i class="fab fa-facebook"></i>
-                </div>
-                <h3>Facebook</h3>
-                <p>Connect with me</p>
-                <a href="https://facebook.com/yourprofile" target="_blank" class="contact-link">Visit</a>
-            </div>
-            
-            <!-- Twitter -->
-            <div class="contact-item">
-                <div class="contact-icon">
-                    <i class="fab fa-twitter"></i>
-                </div>
-                <h3>Twitter</h3>
-                <p>Follow me</p>
-                <a href="https://twitter.com/yourhandle" target="_blank" class="contact-link">Visit</a>
-            </div>
-            
-            <!-- WhatsApp -->
-            <div class="contact-item">
-                <div class="contact-icon">
-                    <i class="fab fa-whatsapp"></i>
-                </div>
-                <h3>WhatsApp</h3>
-                <p>Message me directly</p>
-                <a href="https://wa.me/yourphonenumber" target="_blank" class="contact-link">Chat</a>
-            </div>
-        </div>
+        <div class="contact-container">
+    <h2>Contact Me</h2>
+    <div class="contact-item">
+      <img src="https://img.icons8.com/ios-glyphs/30/000000/email.png" alt="Email Icon" />
+      <a href="mailto:your-email@example.com">your-email@example.com</a>
+    </div>
+    <div class="contact-item">
+      <img src="https://img.icons8.com/ios-filled/30/000000/facebook-new.png" alt="Facebook Icon" />
+      <a href="https://facebook.com/yourprofile" target="_blank">Facebook</a>
+    </div>
+    <div class="contact-item">
+      <img src="https://img.icons8.com/ios-filled/30/000000/twitter.png" alt="Twitter Icon" />
+      <a href="https://twitter.com/yourhandle" target="_blank">@yourhandle</a>
+    </div>
+    <div class="contact-item">
+      <img src="https://img.icons8.com/ios-filled/30/000000/whatsapp.png" alt="WhatsApp Icon" />
+      <a href="https://wa.me/1234567890" target="_blank">+1 234 567 890</a>
     </div>
 
-       </main>
-   
+   </main>
    <script>
      document.addEventListener('DOMContentLoaded', function() {
     const searchBar = document.getElementById('searchBar');
