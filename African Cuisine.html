@@ -71,7 +71,7 @@ div.scroll-container img {
             padding: 30px;
             border-radius: 20px;
             box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-         align: left
+            margin-right:65%;
         }
        
         }
@@ -93,7 +93,7 @@ div.scroll-container img {
         }
         .image-gallery {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             gap: 10px;
             margin: 20px 0;
         }
@@ -125,15 +125,16 @@ div.scroll-container img {
             padding: 6px 15px;
             background: transparent;
             border-radius: 20px;
-            font-size: 13px;
+            font-size: 20px;
             color:#B0903D ;
             cursor: pointer;
+           hover:white;
         }
         .footer {
             text-align: center;
             margin-top: 30px;
             color:#B0903D ;
-            font-size: 12px;
+            font-size: 20px;
         } 
       
       
@@ -152,19 +153,36 @@ div.scroll-container img {
         <a href="Beverages.html">Beverages</a>
         
           </nav>
-   </header>
+  
+   
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search menus, dishes, or pages..." autocomplete="off">
+        <button id="voice-search" title="Voice Search">
+         
+        </button>
+        <button id="search-button" class="action-btn">Search</button>
+    </div>
+    
+    <!-- Saved Items Panel -->
+    <div class="saved-items-container" id="saved-items-container">
+        <h3>Your Saved Items</h3>
+        <div id="saved-items-list"></div>
+        <button id="clear-saved" class="action-btn" style="margin-top: 15px;">Clear All Saved</button>
+    </div>
+       </header>
+   <body>
+
    
     <main>
        <div class="menu-card">
-        <h1>AFRICAN CUISINES</h1>
-        
-        <!-- FOOD SECTION -->
-        <h2>Nigerian Delicacies</h2>
-          <h3>Mains</h3>
-        <div class="image-gallery">
-            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=300" alt="Fried Rice" class="menu-image">
-            <img src="https://images.unsplash.com/photo-1604977046802-80e00a8d0c67?w=300" alt="Jollof Rice" class="menu-image">
-            <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=300" alt="White Rice&Stew" class="menu-image">
+       
+        <h2>Nigereian Delicacies</h2>
+      <div class="image-gallery">
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=285  height=300" alt="Fried Rice" class="menu-image">
+            <img src="https://images.unsplash.com/photo-1604977046802-80e00a8d0c67?w=285  height=300" alt="Jollof Rice" class="menu-image">
+            <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=285  height300" alt="White Rice&Stew" class="menu-image">
+          <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=285  height300" alt="White Rice&Stew" class="menu-image">
+          <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=285  height300" alt="White Rice&Stew" class="menu-image">
           </div>
         <div class="menu-item">
             <span class="item-name"> Fried Rice</span>
@@ -189,11 +207,13 @@ div.scroll-container img {
         
         <div class="divider"></div>
         
-       <h3>Yummy Soups</h3>
+       <h2>Tswana Delicacies</h2>
         <div class="image-gallery">
             <img src="https://images.unsplash.com/photo-1626074353765-517a681e40be?w=300" alt="Affang Soup" class="menu-image">
             <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300" alt="Oha Soup" class="menu-image">
             <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=300" alt="Egusi Asepo" class="menu-image">
+           <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=300" alt="Egusi Asepo" class="menu-image">
+           <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=300" alt="Egusi Asepo" class="menu-image">
         </div>
         <div class="menu-item">
             <span class="item-name">Affang Soup</span>
@@ -219,11 +239,13 @@ div.scroll-container img {
         <div class="divider"></div>
         
         <!-- DRINK SECTION -->
-        <h3>Add-On</h3>
+        <h2>Tanzanian Delicaces</h2>
         <div class="image-gallery">
             <img src="https://images.unsplash.com/photo-1551029506-0807df4e2031?w=300" alt="Beef" class="menu-image">
             <img src="https://images.unsplash.com/photo-1554866585-cd94860890b7?w=300" alt="Chicken" class="menu-image">
             <img src="https://images.unsplash.com/photo-1534841090574-cba2d662b62e?w=300" alt="Shaki" class="menu-image">
+           <img src="https://images.unsplash.com/photo-1534841090574-cba2d662b62e?w=300" alt="Shaki" class="menu-image">
+           <img src="https://images.unsplash.com/photo-1534841090574-cba2d662b62e?w=300" alt="Shaki" class="menu-image">
         </div>
         <div class="menu-item">
             <span class="item-name">Beef</span>
@@ -263,93 +285,143 @@ div.scroll-container img {
 
     </main>
     <script>
-        // Share function
-        function shareMenu() {
-            if (navigator.share) {
-                navigator.share({
-                    title: 'Food Menu',
-                    text: 'Check out this delicious menu!',
-                    url: window.location.href
-                }).catch(err => {
-                    console.log('Error sharing:', err);
-                    alert('Sharing failed. Please try again.');
-                });
-            } else {
-                // Fallback for desktop
-                alert('Copy this link to share: ' + window.location.href);
-                // Or implement a custom share dialog
-            }
-        }
-
-        // Save function
-        function saveMenu() {
-            localStorage.setItem('savedMenu', document.documentElement.outerHTML);
-            alert('Menu saved to browser!');
+         document.addEventListener('DOMContentLoaded', function() {
+            // Previous search functionality code remains
             
-            // Visual feedback
-            const btn = document.querySelector('[onclick="saveMenu()"]');
-            btn.textContent = '✓ Saved';
-            setTimeout(() => btn.textContent = 'Save', 2000);
-        }
+            // Action Buttons
+            const actionButtons = {
+                share: document.querySelector('.action-btn:nth-child(1)'),
+                save: document.querySelector('.action-btn:nth-child(2)'),
+                home: document.querySelector('.action-btn:nth-child(3)'),
+                search: document.querySelector('.action-btn:nth-child(4)'),
+                saved: document.querySelector('.action-btn:nth-child(5)'),
+                notifications: document.querySelector('.action-btn:nth-child(6)')
+            };
 
-        // Home function
-        function goHome() {
-            window.location.href = '/'; // Change to your home URL
-            // Or for single-page apps:
-            // loadHomeContent();
-        }
-
-        // Search function
-        function searchMenu() {
-            const searchTerm = prompt('What would you like to search for?');
-            if (searchTerm) {
-                const items = document.querySelectorAll('.item-name');
-                let found = false;
+            // Saved Items System
+            let savedItems = JSON.parse(localStorage.getItem('savedMenuItems')) || [];
+            const savedItemsContainer = document.getElementById('saved-items-container');
+            const savedItemsList = document.getElementById('saved-items-list');
+            const clearSavedBtn = document.getElementById('clear-saved');
+            
+            // Update saved items display
+            function updateSavedItemsDisplay() {
+                savedItemsList.innerHTML = '';
                 
-                items.forEach(item => {
-                    if (item.textContent.toLowerCase().includes(searchTerm.toLowerCase())) {
-                        item.parentElement.style.backgroundColor = '#fff9c4';
-                        found = true;
-                    }
-                });
-                
-                if (!found) alert('No matching items found');
-            }
-        }
-
-        // View Saved function
-        function viewSaved() {
-            const saved = localStorage.getItem('savedMenu');
-            if (saved) {
-                if (confirm('Open saved menu in new tab?')) {
-                    const blob = new Blob([saved], {type: 'text/html'});
-                    window.open(URL.createObjectURL(blob));
+                if (savedItems.length === 0) {
+                    savedItemsList.innerHTML = '<p class="empty-saved">No items saved yet</p>';
+                    actionButtons.saved.classList.remove('btn-with-badge');
+                    return;
                 }
-            } else {
-                alert('No saved menus found');
-            }
-        }
-
-        // Notifications function
-        function showNotifications() {
-            // Example notification
-            if (!('Notification' in window)) {
-                alert('This browser doesn't support notifications');
-            } else if (Notification.permission === 'granted') {
-                new Notification('Menu Update', {
-                    body: 'New seasonal items available!',
-                    icon: 'https://example.com/icon.png'
+                
+                savedItems.forEach((item, index) => {
+                    const savedItemElement = document.createElement('div');
+                    savedItemElement.className = 'saved-item';
+                    savedItemElement.innerHTML = `
+                        <span>${item.name} - $${item.price}</span>
+                        <button class="remove-saved" data-index="${index}">×</button>
+                    `;
+                    savedItemsList.appendChild(savedItemElement);
                 });
-            } else if (Notification.permission !== 'denied') {
-                Notification.requestPermission().then(permission => {
-                    if (permission === 'granted') {
-                        showNotifications();
-                    }
-                });
+                
+                // Update badge
+                const badge = actionButtons.saved.querySelector('.notification-badge') || 
+                              document.createElement('span');
+                badge.className = 'notification-badge';
+                badge.textContent = savedItems.length;
+                actionButtons.saved.classList.add('btn-with-badge');
+                if (!actionButtons.saved.querySelector('.notification-badge')) {
+                    actionButtons.saved.appendChild(badge);
+                }
             }
-        }
+            
+            // Initialize
+            updateSavedItemsDisplay();
+            
+            // Button Functionality
+            actionButtons.share.addEventListener('click', function() {
+                if (navigator.share) {
+                    navigator.share({
+                        title: 'Restaurant Menu',
+                        text: 'Check out this delicious menu!',
+                        url: window.location.href
+                    }).catch(err => {
+                        alert('Sharing failed. Please try again.');
+                    });
+                } else {
+                    // Fallback for desktop
+                    const shareUrl = `${window.location.href}?shared=true`;
+                    prompt('Copy this link to share:', shareUrl);
+                }
+            });
+            
+            actionButtons.save.addEventListener('click', function() {
+                // In a real app, you'd have a way to select items to save
+                // For demo, we'll save a sample item
+                const sampleItem = {
+                    name: "Chicken Fried Rice",
+                    price: "35",
+                    id: Date.now()
+                };
+                
+                if (!savedItems.some(item => item.id === sampleItem.id)) {
+                    savedItems.push(sampleItem);
+                    localStorage.setItem('savedMenuItems', JSON.stringify(savedItems));
+                    updateSavedItemsDisplay();
+                    alert('Sample item saved! In a real app, you would select items to save.');
+                } else {
+                    alert('This item is already saved');
+                }
+            });
+            
+            actionButtons.home.addEventListener('click', function() {
+                window.location.href = '/'; // Change to your home URL
+            });
+            
+            actionButtons.search.addEventListener('click', function() {
+                document.getElementById('search-input').focus();
+            });
+            
+            actionButtons.saved.addEventListener('click', function() {
+                savedItemsContainer.style.display = savedItemsContainer.style.display === 'block' ? 'none' : 'block';
+            });
+            
+            actionButtons.notifications.addEventListener('click', function() {
+                alert('Notifications would appear here');
+            });
+            
+            // Clear saved items
+            clearSavedBtn.addEventListener('click', function() {
+                if (confirm('Clear all saved items?')) {
+                    savedItems = [];
+                    localStorage.removeItem('savedMenuItems');
+                    updateSavedItemsDisplay();
+                    savedItemsContainer.style.display = 'none';
+                }
+            });
+            
+            // Remove individual saved items
+            savedItemsList.addEventListener('click', function(e) {
+                if (e.target.classList.contains('remove-saved')) {
+                    const index = e.target.getAttribute('data-index');
+                    savedItems.splice(index, 1);
+                    localStorage.setItem('savedMenuItems', JSON.stringify(savedItems));
+                    updateSavedItemsDisplay();
+                }
+            });
+            
+            // Close saved items when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.saved-items-container') && 
+                    !e.target.closest('.action-btn:nth-child(5)')) {
+                    savedItemsContainer.style.display = 'none';
+                }
+            });
+        });
     </script>
 </body> 
+       
+
 
 </html>
   
