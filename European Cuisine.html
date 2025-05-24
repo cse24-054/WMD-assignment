@@ -71,12 +71,7 @@ Lucida Handwriting;
     button:hover {
       background-color: #45a049;
     }
-      input[type=text"] {
-         padding:0.5rem;
-         width:60%;
-         font-size:1rem;
-         margin-right:0.5rem;
-      }
+  
          .menu-card {
             background: transparent;
             max-width:800px;
@@ -156,15 +151,8 @@ Lucida Handwriting;
   <button onclick="showItems()">Show Saved Items</button>
   <button onclick="clearItems()">Clear Saved Items</button>
   <button onclick="shareMenu()">Share Menu</button>
-     <button onclick="downloadMenu()">Download Menu</button>
-
-      <div style="margin-top:20rem;">
-         <input type="text" id="searchInput" placeholder="Say or type a page name..."/>
-          <button onclick="voiceSearch()">🎤</button>
-    <button onclick="navigate()">Go</button>
-  </div>
-
-   </header>
+    
+ </header>
    <main>
      <main>
        <div class="menu-card">
@@ -261,10 +249,7 @@ Lucida Handwriting;
         </div>  
    </main>
     
- 
-
-  <script>
-   <script>
+ <script>
     // Save item
     function saveItem() {
       const item = prompt("Enter a menu item to save:");
@@ -275,8 +260,16 @@ Lucida Handwriting;
         alert("Item saved!");
       }
     }
+function saveItem() {
+      const item = prompt("Enter a menu item to save:");
+      if (item) {
+        let savedItems = JSON.parse(localStorage.getItem("menuItems")) || [];
+        savedItems.push(item);
+        localStorage.setItem("menuItems", JSON.stringify(savedItems));
+        alert("Item saved!");
+      }
+    }
 
-    // Show saved items
     function showItems() {
       const savedItems = JSON.parse(localStorage.getItem("menuItems")) || [];
       if (savedItems.length === 0) {
@@ -286,13 +279,11 @@ Lucida Handwriting;
       }
     }
 
-    // Clear saved items
     function clearItems() {
       localStorage.removeItem("menuItems");
       alert("Saved items cleared.");
     }
 
-    // Share menu
     function shareMenu() {
       const savedItems = JSON.parse(localStorage.getItem("menuItems")) || [];
       const textToShare = savedItems.length > 0 ? savedItems.join("\n") : "No menu items saved.";
@@ -310,62 +301,8 @@ Lucida Handwriting;
         alert("Sharing not supported on this browser.");
       }
     }
-
-    // Download menu as text file
-    function downloadMenu() {
-      const savedItems = JSON.parse(localStorage.getItem("menuItems")) || [];
-      if (savedItems.length === 0) {
-        alert("No items to download.");
-        return;
-      }
-      const blob = new Blob([savedItems.join("\n")], { type: 'text/plain' });
-      const link = document.createElement('a');
-      link.href = URL.createObjectURL(blob);
-      link.download = "menu.txt";
-      link.click();
-    }
-
-    // Search navigation
-    function navigate() {
-      const input = document.getElementById("searchInput").value.toLowerCase().trim();
-
-      if (input.includes("home")) {
-        window.location.href = "index.html";
-      } else if (input.includes("menu")) {
-        window.location.href = "menu.html";
-      } else if (input.includes("event")) {
-        window.location.href = "events.html";
-      } else if (input.includes("contact")) {
-        window.location.href = "contact.html";
-      } else {
-        alert("Page not found. Try: Home, Menu, Events, or Contact.");
-      }
-    }
-
-    // Voice search
-    function voiceSearch() {
-      if (!('webkitSpeechRecognition' in window)) {
-        alert("Your browser does not support voice input.");
-        return;
-      }
-
-      const recognition = new webkitSpeechRecognition();
-      recognition.lang = "en-US";
-      recognition.interimResults = false;
-      recognition.maxAlternatives = 1;
-
-      recognition.onresult = function(event) {
-        const transcript = event.results[0][0].transcript;
-        document.getElementById("searchInput").value = transcript;
-        navigate();
-      };
-
-      recognition.onerror = function(event) {
-        alert("Voice input error: " + event.error);
-      };
-
-      recognition.start();
-    }
+  
+  
   </script> 
                                      
    
