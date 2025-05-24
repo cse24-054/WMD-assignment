@@ -94,11 +94,15 @@ p{text-color:#b0903d;}
 #searchButton{
   right:40px;
   background:transparent;
+  width:45px;
+  height:45px;
 }
 
 #voiceButton {
     margin-left: 10px; /* Positions microphone to the left of search icon */
   background:transparent;
+   width:45px;
+  height:45px;
 }
 
 /* Font Awesome for icons (add this to your head if not already present) */
