@@ -68,6 +68,47 @@ Lucida Handwriting;
       font-size: 1rem;
       margin-right: 0.5rem;
     }
+       .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .polaroid {
+      background: white;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      border-radius: 10px;
+      transition: transform 0.2s;
+    }
+
+    .polaroid:hover {
+      transform: scale(1.03);
+    }
+
+    .polaroid img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .caption {
+      margin-top: 0.75rem;
+      font-weight: bold;
+      color: #444;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #eee;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    } 
 
 
    </style>
@@ -101,6 +142,39 @@ Lucida Handwriting;
 </div>
    
    </header>
+   <main>
+       <section class="gallery">
+    <div class="polaroid">
+      <img src="images/wedding.jpg" alt="Wedding Catering">
+      <div class="caption">Weddings</div>
+    </div>
+
+    <div class="polaroid">
+      <img src="images/birthday.jpg" alt="Birthday Catering">
+      <div class="caption">Birthdays</div>
+    </div>
+
+    <div class="polaroid">
+      <img src="images/corporate.jpg" alt="Corporate Catering">
+      <div class="caption">Corporate Events</div>
+    </div>
+
+    <div class="polaroid">
+      <img src="images/graduation.jpg" alt="Graduation Catering">
+      <div class="caption">Graduations</div>
+    </div>
+
+    <div class="polaroid">
+      <img src="images/babyshower.jpg" alt="Baby Shower Catering">
+      <div class="caption">Baby Showers</div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Your Catering Company. All rights reserved.
+  </footer>
+
+   </main>
   <script>
      document.addEventListener('DOMContentLoaded', function() {
     const searchBar = document.getElementById('searchBar');
