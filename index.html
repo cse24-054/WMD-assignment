@@ -82,7 +82,81 @@ Lucida Handwriting;
          <a href="contact.html">Contact</a>
       </nav>
    </header>
-  
+   <script>
+     document.addEventListener('DOMContentLoaded', function() {
+    const searchBar = document.getElementById('searchBar');
+    const searchButton = document.getElementById('searchButton');
+    const voiceButton = document.getElementById('voiceButton');
+    
+    // Page mappings
+    const pageMap = {
+        'home': 'index.html',
+        'menu': 'menu.html',
+        'african': 'african-cuisine.html',
+        'african cuisine': 'african-cuisine.html',
+        'asian': 'asian-cuisine.html',
+        'asian cuisine': 'asian-cuisine.html',
+        'european': 'european-cuisine.html',
+        'european cuisine': 'european-cuisine.html',
+        'events': 'events.html',
+        'contact': 'contacts.html',
+        'contacts': 'contacts.html'
+    };
+    
+    // Handle text search
+    function handleSearch() {
+        const query = searchBar.value.toLowerCase().trim();
+        
+        for (const [keyword, page] of Object.entries(pageMap)) {
+            if (query.includes(keyword)) {
+                window.location.href = page;
+                return;
+            }
+        }
+        
+        alert("Sorry, we couldn't find that page. Try searching for: menu, african cuisine, asian cuisine, european cuisine, events, or contacts");
+    }
+    
+    searchButton.addEventListener('click', handleSearch);
+    searchBar.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            handleSearch();
+        }
+    });
+    
+    // Handle voice search
+    voiceButton.addEventListener('click', function() {
+        if ('webkitSpeechRecognition' in window) {
+            const recognition = new webkitSpeechRecognition();
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            
+            recognition.onstart = function() {
+                searchBar.placeholder = "Listening...";
+            };
+            
+            recognition.onresult = function(event) {
+                const transcript = event.results[0][0].transcript.toLowerCase();
+                searchBar.value = transcript;
+                handleSearch();
+            };
+            
+            recognition.onerror = function(event) {
+                searchBar.placeholder = "Search pages... (e.g. Menu, African cuisine)";
+                console.error('Voice recognition error', event.error);
+            };
+            
+            recognition.onend = function() {
+                searchBar.placeholder = "Search pages... (e.g. Menu, African cuisine)";
+            };
+            
+            recognition.start();
+        } else {
+            alert("Voice search is not supported in your browser. Try Chrome or Edge.");
+        }
+    });
+}); 
+   </script>
    
 </body>
    
