@@ -3,6 +3,8 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
    <title>KATHETRO</title>
    <style>
       body {
@@ -113,15 +115,33 @@ Lucida Handwriting;
             .contact-grid {
                 grid-template-columns: 1fr;
             }
-           .p{
-              margin-left:800px;
-             text-align: right;
-         font-size:10rem;
-              font-weigt:bold;
-              text-align-right:800px;
-            color:#B0903D;
-            margin-bottom: 30px;
-           }
+           .ringing-phone {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    animation: ring 1.5s infinite;
+    z-index: 1000;
+}
+
+@keyframes ring {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(15deg); }
+    20% { transform: rotate(-10deg); }
+    30% { transform: rotate(15deg); }
+    40% { transform: rotate(-10deg); }
+    50% { transform: rotate(5deg); }
+    60% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
+
+          
            
    </style>
    <link rel="stylesheet" href="styles.css"> <!-- Make sure the path is correct -->
@@ -204,6 +224,7 @@ Lucida Handwriting;
                 <p>Message me directly</p>
                 <a href="https://wa.me/yourphonenumber" target="_blank" class="contact-link">Chat</a>
                
+               
             </div>
         </div>
     </div>
@@ -284,6 +305,9 @@ Lucida Handwriting;
     });
 }); 
    </script>
+   <a href="tel:+267 745625943" class="ringing-phone" title="Call Me">
+    <i class="fas fa-phone"></i>
+</a>
    
 </body>
    
