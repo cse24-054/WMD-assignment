@@ -58,42 +58,40 @@ p{text-color:#b0903d;}
  nav ul{flex-direction:coloumn;
        }
 }
-search-container {
+.search-container {
     display: flex;
     width: 100%;
     max-width: 500px;
     margin: 20px auto;
+    align-items: center;
 }
 
 #searchBar {
     flex: 1;
-    padding: 12px 15px;
+    padding: 10px 15px;
     border: 2px solid #ccc;
-    border-radius: 25px 0 0 25px;
+    border-radius: 25px;
     font-size: 16px;
     outline: none;
 }
 
-#searchButton, #voiceButton {
-    padding: 12px 15px;
-    background: #ff6b6b; /* Adjust to match your site's color scheme */
-    color: white;
+.icon-button {
+    background: none;
     border: none;
     cursor: pointer;
-    transition: background 0.3s;
+    padding: 8px;
+    margin-left: -40px; /* Pulls icons into the input field */
+    z-index: 2;
+    color: #555;
+    transition: color 0.3s;
 }
 
-#searchButton {
-    border-radius: 0 25px 25px 0;
+.icon-button:hover {
+    color: #ff6b6b; /* Match your color scheme */
 }
 
 #voiceButton {
-    border-radius: 0;
-    margin-left: 2px;
-}
-
-#searchButton:hover, #voiceButton:hover {
-    background: #ff5252; /* Darker shade for hover */
+    margin-left: -75px; /* Positions microphone to the left of search icon */
 }
 
 /* Font Awesome for icons (add this to your head if not already present) */
