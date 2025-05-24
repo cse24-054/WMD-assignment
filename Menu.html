@@ -8,7 +8,19 @@
     <link rel="stylesheet" href="style.css">
     
    <style>
-      
+      .container .btn{
+        display:block;
+        justify-content:space-between;
+        }
+      .button{
+        background:#B0903D;
+        border:none;
+        text-decoration:underline;
+        cursor:pointer;
+        font-weght:bold;
+        color:black;
+          padding:10px 20px:
+          transition:color0.3s;
       }
      div.scroll-container {
   background-color:;
@@ -21,104 +33,33 @@
 div.scroll-container img {
   padding: 5px;
 }
-        a{
-         color:#B0903D;
-      }
-       .navbar {
-  overflow: hidden;
-  background-color:transparent;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-}
-
-.navbar a,
-.dropbtn {
-  float: left;
-  font-size: 14px;
-  color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.navbar a:hover,
-.dropdown:hover .dropbtn {
-  background-color:transparent ;
-  color: white;
-}
-
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color:#B0903D;
-  min-width: 100px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  border-radius: 8px;
-  z-index: 1;
-}
-
-.dropdown-content a {
-  float: none;
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-       
- 
    
     </style>
  </head>
   <body>
     <header>
       <h1>  KATHETRO FOOD & DRINKS  </h1>
-      <h2>Explore The World Of Food With Kathetro Menu</h2>
-     
-       <nav>
-       <div class="navbar">
-  <a href="index.html">Home</a>
-  <div class="dropdown">
-    <button class="dropbtn">Menu ▼</button>
-    <div class="dropdown-content">
-       <a href="African Cuisine.html">African Cuisines</a>
-       <a href="Asian Cuisine.html">Asian Cuisines</a>
-        <a href="European Cuisine.html">European Cuisines</a>
-        <a href="Desserts.html">Dessets</a>
-        <a href="Beverages.html">Beverages</a>
-        
-        </div>
-  </div>
-  <a href="events.html">Events</a>
-  <a href="contact.html">Contact</a>
-</div>
-  
-</div>
-   
-   
-       </header>
-         
-    
-    <section class="Menu">
+      <nav>
+        <a href="index.html">Home</a>|
+        <a href="Menu.html">menu</a>|
+        <a href="Event.html">Events</a>|
+        <a href="contact.html">contact</a>
+      </nav>
+    </header>
+     <section class="Menu">
+<h2>KATHETRO MENU</h2>
 
-
- </main>
+    </section>
+     <main class="container">
+         <section class="btn">
+    <button type="button" onclick="window.location.href='European Cuisine.html';">ITALIAN CUISINES</button>
+      <button type="button" onclick="window.location.href='African Cuisine.html';">AFRICAN CUISINES</button>
+      <button type="button" onclick="window.location.href='Asian Cuisine.html';">ASIAN CUISINES</button>
+     <button type="button" onclick="window.location.href='Desserts.html';">DESSERTS</button>
+      <button type="button" onclick="window.location.href='Beverages.html';">BEVERAGES</button>
+    </section>
+       
+     </main>
     <div class="scroll-container">
   <img src="https://ts1.mm.bing.net/th?id=OIP.waoy3qBJWmNQvYkbiuMDewHaE8&pid=15.1.jpg" alt="Cuisines" width="300" height="285">
   <img src="https://th.bing.com/th/id/OIP.69okGrOf8ZZlEsyIWMp10wHaE5?w=255&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="African delicacies" width="300" height="285">
@@ -132,7 +73,7 @@ div.scroll-container img {
     <P>Copyright@KATHETRO2025</P>
   </footer>   
 </div>
-     
+
   </body>
 </html>
 
