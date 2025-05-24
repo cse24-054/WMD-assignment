@@ -33,7 +33,65 @@
 div.scroll-container img {
   padding: 5px;
 }
-   
+       
+   .navbar {
+  overflow: hidden;
+  background-color: #333;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.navbar a,
+.dropbtn {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: transparent;
+  color: white;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:white;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color:white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #B0903D;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
     </style>
  </head>
   <body>
@@ -41,25 +99,26 @@ div.scroll-container img {
       <h1>  KATHETRO FOOD & DRINKS  </h1>
       <h2>Explore The World Of FOOd WIth Kathetro Menu</h2>
       <nav>
-           <nav>
-       <div class="navbar">
+        <div class="navbar">
   <a href="index.html">Home</a>
   <div class="dropdown">
     <button class="dropbtn">Menu ▼</button>
     <div class="dropdown-content">
-       <a href="African Cuisine.html">African Cuisines</a>
-       <a href="Asian Cuisine.html">Asian Cuisines</a>
-        <a href="European Cuisine.html">European Cuisines</a>
-        <a href="Desserts.html">Dessets</a>
-        <a href="Beverages.html">Beverages</a>
-        
-        </div>
+      <a href="african.html">African Cuisine</a>
+      <a href="asian.html">Asian Cuisine</a>
+      <a href="european.html">European Cuisine</a>
+      <a href="beverages.html">Beverages</a>
+      <a href="desserts.html">Desserts</a>
+    </div>
   </div>
   <a href="events.html">Events</a>
   <a href="contact.html">Contact</a>
 </div>
+      </nav>
+     
+    
   
-</div>
+
    
    
     </header>
