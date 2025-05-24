@@ -3,6 +3,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet"href="styles.css"/>
    <title>KATHETRO</title>
    <style>
       body {
@@ -44,51 +45,68 @@ Lucida Handwriting;
          float:bottom;
       }
 
-      .btn {
-         display: flex;
-         justify-content: space-between;
+    
+     
       }
-
-      button {
-         height: 100px;
-         padding: 2rem;
-         margin: 1rem;
+      @media(max-width: 768px)
+      {.dish{flex:1 0 45%;
+            }
       }
-
-        .menu-card {
+      @media(max-width:480px)
+      {.dish{flex:1 0 100%;
+            }
+      }
+     
+    }
+    button {
+      padding: 0.75rem 1.5rem;
+      margin: 0.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background-color:#B0903D;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  
+         .menu-card {
             background: transparent;
-            max-width: 300px;
+            max-width:800px;
             margin: 0 auto;
             padding: 30px;
             border-radius: 20px;
             box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            margin-right:65%;
         }
-      
-        
+       
+        }
         .menu-item {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: left;
             padding: 8px 0;
             border-bottom: 1px dashed #eee;
         }
         .item-name {
-            font-weight:100;
+            font-weight: 500;
         }
         .item-price {
             color: white;
-            font-weight:200;
-            min-width: 40px;
+            font-weight: 600;
+            min-width: 60px;
             text-align: right;
         }
         .image-gallery {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin: 12px 0;
+            grid-template-columns: repeat(4, 1fr);
+            gap:5px;
+            margin: 20px 0;
         }
         .menu-image {
-            width:185;
+            width: 185;
             height: 200px;
             object-fit: cover;
             border-radius: 10px;
@@ -104,126 +122,17 @@ Lucida Handwriting;
             margin: 25px 0;
             border: none;
         }
-        .action-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top:20px;
-            flex-wrap: wrap;
-        }
-        .action-btn {
-            padding: 6px 15px;
-            background:transparent;
-            border-radius: 20px;
-            font-size: 13px;
-            color::#B0903D ;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .action-btn:hover {
-            background: #e74c3c;
-            color: white;
-        }
+     
+       
         .footer {
             text-align: center;
             margin-top: 30px;
-            color: #999;
-            font-size: 12px;
+            color:#B0903D ;
+            font-size: 20px;
         }
+       
         
-        /* Search Bar Styles */
-        .search-container {
-            display: flex;
-            margin: 20px auto;
-            position: relative;
-            max-width:200px;
-        }
-        #search-input {
-            flex: 1;
-            padding: 12px 20px;
-            border: 2px solid #ddd;
-            border-radius: 30px;
-            font-size:10px;
-            outline: none;
-            transition: border 0.3s;
-        }
-        #search-input:focus {
-            border-color: #4285f4;
-        }
-        #voice-search {
-            position:center;
-            right:60px;
-            top: 20%;
-            transform: translateY(-50%);
-            color: #555;
-            background:transparent;
-            border: none;
-            cursor: pointer;
-        }
-        #voice-search.listening {
-            color:#B0903D;
-            animation: pulse 1.5s infinite;
-        }
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.5; }
-            100% { opacity: 1; }
-        }
-        .search-results {
-            max-width: 200px;
-            margin: 10px auto;
-            padding: 20px;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-        }
-        .search-result-item {
-            padding: 10px;
-            margin: 5px 0;
-            border-bottom: 1px solid #eee;
-            cursor: pointer;
-        }
-        .search-result-item:hover {
-            background-color: #f0f0f0;
-        }
-        .search-history {
-            margin-top: 20px;
-            padding: 15px;
-            background:transparent;
-            border-radius: 8px;
-            max-width: 300px;
-            margin: 20px auto;
-        }
-        .history-title {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        .history-items {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-        .history-item {
-            background:transparent;
-            padding: 5px 10px;
-            border-radius: 15px;
-            border: 1px solid #ddd;
-            cursor: pointer;
-            font-size: 14px;
-            transition: all 0.2s;
-        }
-        .history-item:hover {
-            background:transparent;
-            color: white;
-            border-color: #4285f4;
-        }
-        .clear-history {
-            color: #f44336;
-            cursor: pointer;
-            font-size: 13px;
-        }
-   </style>
+      </style>
    <link rel="stylesheet" href="styles.css"> <!-- Make sure the path is correct -->
 </head>
 <body>
@@ -231,306 +140,174 @@ Lucida Handwriting;
       <h1>ASIAN DELICACIES</h1>
       <h2>Where our catering bliss is sealed with a kiss</h2>
       <nav>
-       <a href="Menu.html">Menu</a>
+      <a href="Menu.html">Menu</a>
         <a href="African Cuisine.html">African</a>
         <a href="European Cuisine.html">European</a>
-        <a href="Desserts.html">Desserts</a>
+        <a href="Desserts.html">Dessets</a>
         <a href="Beverages.html">Beverages</a>
         
-        
           </nav>
-       <div class="search-container">
-        <input type="text" id="search-input" placeholder="Search menus, dishes, or pages..." autocomplete="off">
-        <button id="voice-search" title="Voice Search">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
-                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
-                <line x1="12" y1="19" x2="12" y2="23"></line>
-                <line x1="8" y1="23" x2="16" y2="23"></line>
-            </svg>
-        </button>
-        <button id="search-button" class="action-btn">Search</button>
-    </div>
+       <button onclick="saveItem()">Save Item</button>
+  <button onclick="showItems()">Show Saved Items</button>
+  <button onclick="clearItems()">Clear Saved Items</button>
+  <button onclick="shareMenu()">Share Menu</button>
     
-    <div class="search-results" id="search-results"></div>
-    <div class="search-history" id="search-history">
-        <div class="history-title">
-            <h3>Recent Searches</h3>
-            <span class="clear-history" id="clear-history">Clear All</span>
-        </div>
-        <div class="history-items" id="history-items"></div>
-    </div>
-
-    <div class="menu-card">
-        <!-- Your existing menu content remains unchanged -->
-        <h1>FOOD MENU</h1>
-        
-        <!-- FOOD SECTION -->
-        <h2>FOOD</h2>
-        <div class="image-gallery">
-            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=300" alt="Fried Rice" class="menu-image">
-            <img src="https://images.unsplash.com/photo-1604977046802-80e00a8d0c67?w=300" alt="Spicy Chicken" class="menu-image">
-            <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=300" alt="Noodles" class="menu-image">
-        </div>
+ </header>
+   <main>
+     <main>
+       <div class="menu-card">
+       
+        <h2>Chinese Delicacies</h2>
+      <div class="image-gallery">
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=185  height=200" alt="Fried Rice" class="menu-image">
+            <img src="https://images.unsplash.com/photo-1604977046802-80e00a8d0c67?w=185  height=200" alt="Jollof Rice" class="menu-image">
+            <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=185  height200" alt="White Rice&Stew" class="menu-image">
+          <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=185  height200" alt="White Rice&Stew" class="menu-image">
+         
+          </div>
         <div class="menu-item">
-            <span class="item-name">Chicken Fried Rice</span>
+            <span class="item-name"> Fried Rice</span>
             <span class="item-price">$35</span>
         </div>
-        <!-- Rest of your menu items... -->
+        <div class="menu-item">
+            <span class="item-name">Jollof Rice</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Poundo Yam</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Garri</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Amala</span>
+            <span class="item-price">$35</span>
+        </div>
         
-    </div>
-   </header>
-   
-     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const searchInput = document.getElementById('search-input');
-            const searchButton = document.getElementById('search-button');
-            const voiceSearch = document.getElementById('voice-search');
-            const searchResults = document.getElementById('search-results');
-            const clearHistoryBtn = document.getElementById('clear-history');
-            const historyItemsContainer = document.getElementById('history-items');
+        <div class="divider"></div>
+        
+       <h2>Korean Delicacies</h2>
+        <div class="image-gallery">
+            <img src="https://images.unsplash.com/photo-1626074353765-517a681e40be?w=300" alt="Affang Soup" class="menu-image">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?width="185 height="200" alt="Oha Soup" class="menu-image">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?width="185 height="200" alt="Oha Soup" class="menu-image">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?width="185 height="200" alt="Oha Soup" class="menu-image">
             
-            // Define your website pages with keywords
-            const websitePages = [
-                {
-                    name: "Main Menu",
-                    url: "/menu",
-                    keywords: ["menu", "main menu", "food menu", "all dishes"]
-                },
-                {
-                    name: "African Dishes Menu",
-                    url: "/african-dishes",
-                    keywords: ["african", "africa", "african food", "jollof", "suya", "egusi"]
-                },
-                {
-                    name: "Asian Dishes Menu",
-                    url: "/asian-dishes",
-                    keywords: ["asian", "asia", "chinese", "sushi", "ramen", "curry"]
-                },
-                {
-                    name: "European Dishes Menu",
-                    url: "/european-dishes",
-                    keywords: ["european", "europe", "pasta", "pizza", "french", "italian"]
-                },
-              
-            ];
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Affang Soup</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Oha Soup</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Egusi soup</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Assorted Pepper Soup</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Ground Nut Soup</span>
+            <span class="item-price">$35</span>
+        </div>
+        
+        <div class="divider"></div>
+        
+      
+        <h2>Japanese Delicaces</h2>
+        <div class="image-gallery">
+           <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?width="185 height="200" alt="Oha Soup" class="menu-image">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?width="185 height="200" alt="Oha Soup" class="menu-image">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?width="185 height="200" alt="Oha Soup" class="menu-image">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?width="185 height="200" alt="Oha Soup" class="menu-image">
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Beef</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Chicken</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Shaki</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Ox Tail</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Fish</span>
+            <span class="item-price">$35</span>
+        </div>  
+   </main>
+    
+ <script>
+    // Save item
+    function saveItem() {
+      const item = prompt("Enter a menu item to save:");
+      if (item) {
+        let savedItems = JSON.parse(localStorage.getItem("menuItems")) || [];
+        savedItems.push(item);
+        localStorage.setItem("menuItems", JSON.stringify(savedItems));
+        alert("Item saved!");
+      }
+    }
+function saveItem() {
+      const item = prompt("Enter a menu item to save:");
+      if (item) {
+        let savedItems = JSON.parse(localStorage.getItem("menuItems")) || [];
+        savedItems.push(item);
+        localStorage.setItem("menuItems", JSON.stringify(savedItems));
+        alert("Item saved!");
+      }
+    }
 
-            // Search History
-            const MAX_HISTORY_ITEMS = 5;
-            let searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
-            
-            // Initialize
-            updateHistoryDisplay();
-            
-            // Speech Recognition
-            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-            let recognition;
-            
-            if (SpeechRecognition) {
-                recognition = new SpeechRecognition();
-                recognition.continuous = false;
-                recognition.interimResults = false;
-                recognition.lang = 'en-US';
-                
-                recognition.onstart = function() {
-                    voiceSearch.classList.add('listening');
-                    searchInput.placeholder = "Listening...";
-                };
-                
-                recognition.onend = function() {
-                    voiceSearch.classList.remove('listening');
-                    searchInput.placeholder = "Search menus, dishes, or pages...";
-                };
-                
-                recognition.onresult = function(event) {
-                    const transcript = event.results[0][0].transcript;
-                    searchInput.value = transcript;
-                    performSearch(transcript);
-                };
-                
-                recognition.onerror = function(event) {
-                    console.error('Speech recognition error', event.error);
-                    showError(`Error: ${event.error}. Please try again.`);
-                };
-            } else {
-                voiceSearch.style.display = 'none';
-            }
-            
-            // Event Listeners
-            voiceSearch.addEventListener('click', startVoiceSearch);
-            searchButton.addEventListener('click', () => performSearch(searchInput.value.trim()));
-            searchInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') performSearch(searchInput.value.trim());
-            });
-            clearHistoryBtn.addEventListener('click', clearSearchHistory);
-            searchInput.addEventListener('input', showSuggestions);
-            
-            // Functions
-            function startVoiceSearch() {
-                if (recognition) {
-                    try {
-                        recognition.start();
-                    } catch (e) {
-                        showError('Microphone access error. Please check permissions.');
-                    }
-                }
-            }
-            
-            function performSearch(query) {
-                if (!query) {
-                    showError('Please enter a search term');
-                    return;
-                }
-                
-                addToHistory(query);
-                const normalizedQuery = query.toLowerCase();
-                let foundPages = [];
-                
-                // Search logic
-                websitePages.forEach(page => {
-                    if (page.name.toLowerCase().includes(normalizedQuery)) {
-                        foundPages.push({...page, matchType: "page name"});
-                        return;
-                    }
-                    
-                    const matchedKeyword = page.keywords.find(keyword => 
-                        normalizedQuery.includes(keyword.toLowerCase()) || 
-                        keyword.toLowerCase().includes(normalizedQuery)
-                    );
-                    
-                    if (matchedKeyword) {
-                        foundPages.push({...page, matchType: `matched: ${matchedKeyword}`});
-                    }
-                });
-                
-                // Display results
-                if (foundPages.length > 0) {
-                    let resultsHTML = `<h3>Found ${foundPages.length} matching page(s):</h3>`;
-                    foundPages.forEach(page => {
-                        resultsHTML += `
-                            <div class="search-result-item" onclick="window.location.href='${page.url}'">
-                                <strong>${page.name}</strong>
-                                <p>${page.url} • ${page.matchType}</p>
-                            </div>
-                        `;
-                    });
-                    searchResults.innerHTML = resultsHTML;
-                } else {
-                    searchResults.innerHTML = `
-                        <p>No pages found for "${query}". Try searching for:</p>
-                        <ul>
-                            <li>"Menu" or "Food"</li>
-                            <li>"African" or "Asian" dishes</li>
-                            <li>"Beverages" or "Desserts"</li>
-                            <li>"Events" or "Contact"</li>
-                        </ul>
-                    `;
-                }
-            }
-            
-            function showSuggestions() {
-                const query = searchInput.value.trim().toLowerCase();
-                if (query.length === 0) {
-                    searchResults.innerHTML = '';
-                    return;
-                }
-                
-                // Get suggestions from both pages and keywords
-                const suggestions = [];
-                
-                websitePages.forEach(page => {
-                    // Check page names
-                    if (page.name.toLowerCase().includes(query)) {
-                        suggestions.push(page.name);
-                    }
-                    
-                    // Check keywords
-                    page.keywords.forEach(keyword => {
-                        if (keyword.toLowerCase().includes(query) && !suggestions.includes(keyword)) {
-                            suggestions.push(keyword);
-                        }
-                    });
-                });
-                
-                // Display suggestions
-                if (suggestions.length > 0) {
-                    let suggestionsHTML = `<div class="suggestions"><p>Suggestions:</p><ul>`;
-                    suggestions.slice(0, 5).forEach(suggestion => {
-                        suggestionsHTML += `<li onclick="document.getElementById('search-input').value='${suggestion}'; performSearch('${suggestion}')">${suggestion}</li>`;
-                    });
-                    suggestionsHTML += `</ul></div>`;
-                    searchResults.innerHTML = suggestionsHTML;
-                }
-            }
-            
-            function addToHistory(query) {
-                // Remove if already exists
-                const index = searchHistory.indexOf(query);
-                if (index !== -1) searchHistory.splice(index, 1);
-                
-                // Add to beginning
-                searchHistory.unshift(query);
-                
-                // Limit history size
-                if (searchHistory.length > MAX_HISTORY_ITEMS) {
-                    searchHistory.pop();
-                }
-                
-                // Save to storage and update display
-                localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
-                updateHistoryDisplay();
-            }
-            
-            function updateHistoryDisplay() {
-                historyItemsContainer.innerHTML = '';
-                
-                searchHistory.forEach(item => {
-                    const historyElement = document.createElement('div');
-                    historyElement.className = 'history-item';
-                    historyElement.textContent = item;
-                    historyElement.addEventListener('click', () => {
-                        searchInput.value = item;
-                        performSearch(item);
-                    });
-                    historyItemsContainer.appendChild(historyElement);
-                });
-                
-                // Show/hide history section
-                document.getElementById('search-history').style.display = 
-                    searchHistory.length > 0 ? 'block' : 'none';
-            }
-            
-            function clearSearchHistory() {
-                searchHistory = [];
-                localStorage.removeItem('searchHistory');
-                updateHistoryDisplay();
-            }
-            
-            function showError(message) {
-                searchResults.innerHTML = `<p class="error">${message}</p>`;
-            }
-            
-            // Check microphone permission
-            function checkMicrophonePermission() {
-                if (navigator.permissions) {
-                    navigator.permissions.query({ name: 'microphone' })
-                        .then(permissionStatus => {
-                            permissionStatus.onchange = function() {
-                                if (this.state === 'denied') {
-                                    showError('Microphone access denied. Please enable in settings.');
-                                }
-                            };
-                        });
-                }
-            }
-            
-            checkMicrophonePermission();
+    function showItems() {
+      const savedItems = JSON.parse(localStorage.getItem("menuItems")) || [];
+      if (savedItems.length === 0) {
+        alert("No items saved.");
+      } else {
+        alert("Saved Items:\n" + savedItems.join("\n"));
+      }
+    }
+
+    function clearItems() {
+      localStorage.removeItem("menuItems");
+      alert("Saved items cleared.");
+    }
+
+    function shareMenu() {
+      const savedItems = JSON.parse(localStorage.getItem("menuItems")) || [];
+      const textToShare = savedItems.length > 0 ? savedItems.join("\n") : "No menu items saved.";
+
+      if (navigator.share) {
+        navigator.share({
+          title: "My Catering Menu",
+          text: textToShare
+        }).then(() => {
+          console.log("Menu shared successfully");
+        }).catch(err => {
+          console.error("Error sharing:", err);
         });
-    </script>
-</body>
-</html>
-
+      } else {
+        alert("Sharing not supported on this browser.");
+      }
+    }
+  
+  
+  </script> 
+                                     
+   
 </body>
    
 </html>
-  
+    
+    
