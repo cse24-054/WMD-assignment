@@ -61,9 +61,9 @@ p{text-color:#b0903d;}
 .search-container {
     display: flex;
     width: 100%;
-    max-width: 200px;
+    max-width: 500px;
     margin: 15px auto;
-    align-items: center;
+    position:relative;
 }
 
 #searchBar {
@@ -76,22 +76,25 @@ p{text-color:#b0903d;}
 }
 
 .icon-button {
-    background: none;
+    background:transparent;
     border: none;
     cursor: pointer;
     padding: 8px;
     margin-left: -40px; /* Pulls icons into the input field */
     z-index: 2;
-    color: #555;
+    color:#b0903d ;
     transition: color 0.3s;
 }
 
 .icon-button:hover {
     color: #ff6b6b; /* Match your color scheme */
 }
+#searchButton{
+  right:35px;
+}
 
 #voiceButton {
-    margin-left: -75px; /* Positions microphone to the left of search icon */
+    margin-left: 15px; /* Positions microphone to the left of search icon */
 }
 
 /* Font Awesome for icons (add this to your head if not already present) */
