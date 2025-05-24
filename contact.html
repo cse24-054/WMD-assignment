@@ -54,6 +54,29 @@ Lucida Handwriting;
          padding: 2rem;
          margin: 1rem;
       }
+      .contact-container {
+      max-width: 400px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin: 15px 0;
+    }
+    .contact-item img {
+      width: 30px;
+      margin-right: 15px;
+    }
+    .contact-item a {
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+    }
+ 
    </style>
    <link rel="stylesheet" href="styles.css"> <!-- Make sure the path is correct -->
 </head>
@@ -88,6 +111,27 @@ Lucida Handwriting;
 
       
    </header>
+   <main>
+    <div class="contact-container">
+    <h2>Contact Me</h2>
+    <div class="contact-item">
+      <img src="https://img.icons8.com/ios-glyphs/30/000000/email.png" alt="Email Icon" />
+      <a href="mailto:your-email@example.com">your-email@example.com</a>
+    </div>
+    <div class="contact-item">
+      <img src="https://img.icons8.com/ios-filled/30/000000/facebook-new.png" alt="Facebook Icon" />
+      <a href="https://facebook.com/yourprofile" target="_blank">Facebook</a>
+    </div>
+    <div class="contact-item">
+      <img src="https://img.icons8.com/ios-filled/30/000000/twitter.png" alt="Twitter Icon" />
+      <a href="https://twitter.com/yourhandle" target="_blank">@yourhandle</a>
+    </div>
+    <div class="contact-item">
+      <img src="https://img.icons8.com/ios-filled/30/000000/whatsapp.png" alt="WhatsApp Icon" />
+      <a href="https://wa.me/1234567890" target="_blank">+1 234 567 890</a>
+    </div>
+  </div>
+       </main>
    
    <script>
      document.addEventListener('DOMContentLoaded', function() {
