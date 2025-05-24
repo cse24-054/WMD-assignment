@@ -64,6 +64,7 @@ p{text-color:#b0903d;}
     max-width: 500px;
     margin: 15px auto;
     position:relative;
+  background:tramsparent;
 }
 
 #searchBar {
@@ -92,10 +93,12 @@ p{text-color:#b0903d;}
 }
 #searchButton{
   right:40px;
+  background:transparent;
 }
 
 #voiceButton {
     margin-left: 10px; /* Positions microphone to the left of search icon */
+  background:transparent;
 }
 
 /* Font Awesome for icons (add this to your head if not already present) */
