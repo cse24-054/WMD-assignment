@@ -87,14 +87,15 @@ p{text-color:#b0903d;}
 }
 
 .icon-button:hover {
-    color: #ff6b6b; /* Match your color scheme */
+    color: #b0903d; /* Match your color scheme */
+  backgroung:transparent;
 }
 #searchButton{
-  right:35px;
+  right:40px;
 }
 
 #voiceButton {
-    margin-left: 15px; /* Positions microphone to the left of search icon */
+    margin-left: 10px; /* Positions microphone to the left of search icon */
 }
 
 /* Font Awesome for icons (add this to your head if not already present) */
