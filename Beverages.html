@@ -24,8 +24,7 @@ Lucida Handwriting;
    
       h1 h2 {
          text-align: left;
-         font-size:8rem;
-         color:#B0903D;
+         font-size:6rem;
           }
 
       .container {
@@ -55,147 +54,11 @@ Lucida Handwriting;
          padding: 2rem;
          margin: 1rem;
       }
-        .menu-card {
-            background-color: transparent;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-            position: relative;
-            overflow: hidden;
-        }
-        h1 {
-            color:#B0903D ;
-            font-size:2rem;
-            text-align:left;
-            margin-bottom:10px;
-            font-weight: 700;
-        }
-        h2 {
-            color:#B0903D ;
-            font-size:2rem;
-            margin-top:15px;
-            margin-bottom:10px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #f1f1f1;
-            display: inline-block;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-            margin: 0;
-        }
-        li {
-            margin-bottom: 5px;
-            position: relative;
-            padding-left: 20px;
-            transition: all 0.3s;
-        }
-        li:hover {
-            transform: translateX(5px);
-        }
-        li:before {
-            content: "•";
-            color:white ;
-            position: absolute;
-            left: 0;
-            font-size: 4rem;
-        }
-        .price {
-            display: inline;
-            margin-left:3rem;
-            color: white;
-            font-weight:bold;
-           font-size:28px;
-        }
-        .divider {
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #ddd, transparent);
-            margin:20px 0;
-            border: none;
-        }
-        
-        /* Image Grid */
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap:5px;
-            margin: 15px 0;
-        }
-        .menu-image {
-            width: 250px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-        .menu-image:hover {
-            transform: scale(1.03);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-        }
-        
-        /* Lightbox */
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 290px;
-            height: 250px;
-            background: rgba(0,0,0,0.9);
-            z-index: 100;
-            justify-content: center;
-            align-items: center;
-        }
-        .lightbox img {
-            max-width: 150px;
-            max-height: 200px%;
-            border-radius: 10px;
-        }
-        .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: white;
-            font-size: 30px;
-            cursor: pointer;
-        }
-        
-        /* Action Buttons */
-        .action-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
-        .action-btn {
-            padding: 8px 20px;
-            background: #f1f1f1;
-            border-radius: 30px;
-            font-size: 14px;
-            color: #7f8c8d;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        .action-btn:hover {
-            background: #e74c3c;
-            color: white;
-        }
-        
-        /* Footer */
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            color: #95a5a6;
-            font-size: 12px;
-        }
-    </style>
-      <link rel="stylesheet" href="styles.css"> <!-- Make sure the path is correct -->
+   </style>
+   <link rel="stylesheet" href="styles.css"> <!-- Make sure the path is correct -->
 </head>
 <body>
-    <header>
+   <header>
       <h1>BEVERAGES</h1>
       <h2>Where our catering bliss is sealed with a kiss</h2>
       <nav>
@@ -207,91 +70,8 @@ Lucida Handwriting;
         
           </nav>
    </header>
-    <div class="menu-card">
-        <h1>FOOD MENU</h1>
-        
-        <!-- FOOD SECTION -->
-        <h2>FOOD</h2>
-        <div class="image-grid">
-            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=500" alt="Chicken Fried Rice" class="menu-image" onclick="openLightbox(this.src)">
-            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=500" alt="Chicken Fried Rice" class="menu-image" onclick="openLightbox(this.src)">
-            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=500" alt="Chicken Fried Rice" class="menu-image" onclick="openLightbox(this.src)">
-           <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=500" alt="Chicken Fried Rice" class="menu-image" onclick="openLightbox(this.src)">
-        </div>
-        <ul>
-            <li>Chicken Fried Rice<span class="price">$35</span></li>
-            <li>Spicy Chicken<span class="price">$35</span></li>
-            <li>Banma Noodle<span class="price">$35</span></li>
-            <li>Tuna Sandwich<span class="price">$35</span></li>
-            <li>Teriyaki Rice Bowl<span class="price">$35</span></li>
-        </ul>
-        
-        <div class="divider"></div>
-        
-        <!-- SNACK SECTION -->
-        <h2>SNACK</h2>
-        <div class="image-grid">
-            <img src="https://images.unsplash.com/photo-1626074353765-517a681e40be?w=500" alt="Potato Wedges" class="menu-image" onclick="openLightbox(this.src)">
-            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500" alt="Beef Burger" class="menu-image" onclick="openLightbox(this.src)">
-            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=500" alt="Chicken Fried Rice" class="menu-image" onclick="openLightbox(this.src)">
-            <img src="https://images.unsplash.com/photo-1604977046802-80e00a8d0c67?w=500" alt="Spicy Chicken" class="menu-image" onclick="openLightbox(this.src)">
-        </div>
-        <ul>
-            <li>Potato Wedges<span class="price">$35</span></li>
-            <li>Fried Fries<span class="price">$35</span></li>
-            <li>Beef Burger<span class="price">$35</span></li>
-            <li>Chicken Nuggets<span class="price">$35</span></li>
-            <li>Teriyaki Rice Bowl<span class="price">$35</span></li>
-        </ul>
-        
-        <div class="divider"></div>
-        
-        <!-- DRINK SECTION -->
-        <h2>DRINK</h2>
-        <div class="image-grid">
-            <img src="https://images.unsplash.com/photo-1551029506-0807df4e2031?w=500" alt="Summer Sour" class="menu-image" onclick="openLightbox(this.src)">
-            <img src="https://images.unsplash.com/photo-1554866585-cd94860890b7?w=500" alt="Tropical Sweet" class="menu-image" onclick="openLightbox(this.src)">
-            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=500" alt="Chicken Fried Rice" class="menu-image" onclick="openLightbox(this.src)">
-            <img src="https://images.unsplash.com/photo-1604977046802-80e00a8d0c67?w=500" alt="Spicy Chicken" class="menu-image" onclick="openLightbox(this.src)">
-        </div>
-        <ul>
-            <li>Summer Sour<span class="price">$35</span></li>
-            <li>Mineral Water<span class="price">$35</span></li>
-            <li>Tropical Sweet<span class="price">$35</span></li>
-            <li>Fresh Soda<span class="price">$35</span></li>
-            <li>Teriyaki Rice Bowl<span class="price">$35</span></li>
-        </ul>
-        
-        <div class="action-buttons">
-            <div class="action-btn">Share</div>
-            <div class="action-btn">Save</div>
-            <div class="action-btn">Home</div>
-            <div class="action-btn">Search</div>
-            <div class="action-btn">Saved</div>
-            <div class="action-btn">Notifications</div>
-        </div>
-        
-        <div class="footer">
-            <p><strong>Customize 19,404+ Menus Templates Online - Canva</strong></p>
-            <p>Images may be subject to copyright. Learn More</p>
-        </div>
-    </div>
-    
-    <!-- Lightbox -->
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <span class="close-btn">&times;</span>
-        <img id="lightbox-img" src="" alt="Enlarged view">
-    </div>
-    
-    <script>
-        function openLightbox(src) {
-            document.getElementById('lightbox-img').src = src;
-            document.getElementById('lightbox').style.display = 'flex';
-        }
-        function closeLightbox() {
-            document.getElementById('lightbox').style.display = 'none';
-        }
-    </script>
+   
 </body>
+   
 </html>
- 
+  

@@ -21,119 +21,53 @@ Lucida Handwriting;
          image-align:center;
      
       }
-    
    
       h1 h2 {
          text-align: left;
          font-size:6rem;
           }
-       a{
+
+      .container {
+         display: flex;
+         flex: 1;
+         padding: 20px;
+      }
+      a{
          color:#B0903D;
       }
-      .menu-container {
-           background-image: url('https://wallpaperaccess.com/full/5600212.jpg');
-            border-radius: 12px;
-            box-shadow: 0 4px 12px #B0903D);
-            padding: 30px;
-        }
-        h1 {
-            color:#B0903D;
-            text-align: center;
-            font-size: 28px;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #f1f1f1;
-            padding-bottom: 15px;
-        }
-        h2 {
-            color:#B0903D;
-            font-size: 22px;
-            margin-top: 25px;
-            margin-bottom: 15px;
-        }
-        .menu-section {
-            margin-bottom: 25px;
-        }
-        .menu-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 12px 0;
-            border-bottom: 1px dashed:#B0903D;
-        }
-        .item-name {
-            font-weight: 600;
-            color:#B0903D;
-        }
-        .item-price {
-            color:#B0903D;
-            font-weight: bold;
-        }
-        .divider {
-            height: 1px;
-            background-color:#B0903D;
-            margin: 20px 0;
-        }
-        .menu-wrapper {
-            max-width: 1000px;
-            hright:1050px;
-            margin: 0 auto;
-            position: relative;
-        }
-        .menu-container {
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            padding: 40px;
-            position: relative;
-            z-index: 2;
-        }
-    .decorative -image{
-      position:absolute;
-      border-radius:10px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.2);
-      z-index:1;
-    }
-    .image-top-right{
-      width:250px;
-      height:300px;
-      top:-30px;
-      transform:rotate(5deg);
-          background-image:url( "https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg") ;
-       background-size:cover;
-    }
-     .image-bottom-left {
-            width: 220px;
-            height: 320px;
-            bottom: -40px;
-            left: -30px;
-            background-image:url( "https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg") ;
-       background-size:cover;
-            transform: rotate(-8deg);
-        }
-        .image-side-right {
-            width: 200px;
-            height: 2t0px;
-            right: -20px;
-            top: 50%;
-            transform: translateY(-50%);
-            background-image:("https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg".jpg);
-          background-size:cover;
-        }
-    .right img {
-      width: 300px;
-      height: 285px;
-      margin-bottom: 15px;
-      border: 3px solid #B0903D;
-      margin-left:1000px;
-      diplay:column;
-        .footer {
-            text-align: center;
-            margin-top: 30px;
-            color: # #B0903D;
-            font-size: 14px;
-        }
 
+      .footer {
+        
+         text-color:#B0903D ;
+         text-align: center;
+         padding: 5px;
+         float:bottom;
+      }
+
+      .btn {
+         display: flex;
+         justify-content: space-between;
+      }
+
+      button {
+         height: 100px;
+         padding: 2rem;
+         margin: 1rem;
+      }
+     div.scroll-container {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+div.scroll-container img {
+  padding: 10px;
+} 
+      
+      
 </style>
-   <link rel="stylesheet" href="Menustyles.css"> <!-- Make sure the path is correct -->
+   <link rel="stylesheet" href="styles.css"> <!-- Make sure the path is correct -->
 </head>
 <body>
    <header>
@@ -148,100 +82,20 @@ Lucida Handwriting;
         
           </nav>
    </header>
-      <div class="menu-container">
-        <h1>FOOD MENU</h1>
-           <div class="menu-wrapper">
-        <!-- Decorative Images Around Menu -->
-        <div class="decorative-image image-top-right"></div>
-        <div class="decorative-image image-bottom-left"></div>
-        <div class="decorative-image image-side-right"></div>
-        
-        <div class="menu-section">
-            <h2>FOOD</h2>
-            <div class="menu-item">
-                <span class="item-name">Chicken Fried Rice</span>
-                <span class="item-price">$35</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Spicy Chicken</span>
-                <span class="item-price">$35</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Banma Noodle ;="item-price">$35</span>
-                
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Tuna Sandwich</span>
-                <span class="item-price">$35</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Teriyaki Rice Bowl</span>
-                <span class="item-price">$35</span>
-            </div>
-        </div>
-        
-        <div class="divider"></div>
-        
-        <div class="menu-section">
-            <h2>SNACK</h2>
-            <div class="menu-item">
-                <span class="item-name">Potato Wedges</span>
-                <span class="item-price">$35</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Fried Fries</span>
-                <span class="item-price">$35</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Beef Burger</span>
-                <span class="item-price">$35</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Chicken Nuggets</span>
-                <span class="item-price">$35</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Teriyaki Rice Bowl</span>
-                <span class="item-price">$35</span>
-            </div>
-        </div>
-        
-        <div class="divider"></div>
-        
-        <div class="menu-section">
-            <h2>DRINK</h2>
-            <div class="menu-item">
-                <span class="item-name">Summer Sour</span>
-                <span class="item-price">$35</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Mineral Water</span>
-                <span class="item-price">$35</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Tropical Sweet</span>
-                <span class="item-price">$35</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Fresh Soda</span>
-                <span class="item-price">$35</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Teriyaki Rice Bowl</span>
-                <span class="item-price">$35</span>
-            </div>
-        </div>
-        
-        <div class="footer">
-            <p>Customizable Menu Template</p>
-        </div>
-    </div>
-</body>
-</html>
- 
+   
+    <main>
+      
+       <h2>starters</h2>
+        <div class="scroll-container">
+  <img src="https://ts1.mm.bing.net/th?id=OIP.waoy3qBJWmNQvYkbiuMDewHaE8&pid=15.1.jpg" alt="Cuisines" width="300" height="285"><P>DELICIOUS FOOD</P>
+  <img src="https://th.bing.com/th/id/OIP.69okGrOf8ZZlEsyIWMp10wHaE5?w=255&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="African delicacies" width="300" height="285"><P>TASTY FOOD</P>
+  <img src="https://th.bing.com/th/id/OIP.WwALUrLEXNZbyUN8d24HPQHaE8?w=243&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Northern Lights" width="300" height="285"><P>TASTY</P>
+  <img src="https://th.bing.com/th/id/OIP.HdzzQdKa8ozUTG7HH0NLUQHaEw?w=271&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Mountains" width="300" height="285">
+  <img src="https://th.bing.com/th/id/OIP.Xkmzez6u196HK7mUGmLlZQHaE5?w=231&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Cuisines" width="300" height="285">
+  <img src="https://th.bing.com/th/id/OIP.TwbLy3Nxzhz6OkCfWIBzwgHaE8?w=268&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="African delicacies" width="300" height="285">
+  <img src="https://th.bing.com/th/id/OIP.gPXrA_33lMJX3dHkBVXVagHaE8?w=277&h=185&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Northern Lights" width="300" height="285">
+  <img src="https://th.bing.com/th/id/OIP.KSXYH0H6ahmtMECS3Y44CAHaNK?w=115&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Mountains" width="300" height="285">
   
-
- 
    </body>
    
 </html>
