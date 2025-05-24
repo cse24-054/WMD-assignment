@@ -3,6 +3,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet"href="styles.css"/>
    <title>KATHETRO</title>
    <style>
       body {
@@ -44,17 +45,94 @@ Lucida Handwriting;
          float:bottom;
       }
 
-      .btn {
-         display: flex;
-         justify-content: space-between;
+    
+     
       }
-
-      button {
-         height: 100px;
-         padding: 2rem;
-         margin: 1rem;
+      @media(max-width: 768px)
+      {.dish{flex:1 0 45%;
+            }
       }
-   </style>
+      @media(max-width:480px)
+      {.dish{flex:1 0 100%;
+            }
+      }
+     
+    }
+    button {
+      padding: 0.75rem 1.5rem;
+      margin: 0.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background-color:#B0903D;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  
+         .menu-card {
+            background: transparent;
+            max-width:800px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            margin-right:65%;
+        }
+       
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: left;
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+        }
+        .item-name {
+            font-weight: 500;
+        }
+        .item-price {
+            color: white;
+            font-weight: 600;
+            min-width: 60px;
+            text-align: right;
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap:5px;
+            margin: 20px 0;
+        }
+        .menu-image {
+            width: 185;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .menu-image:hover {
+            transform: scale(1.03);
+        }
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ddd, transparent);
+            margin: 25px 0;
+            border: none;
+        }
+     
+       
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color:#B0903D ;
+            font-size: 20px;
+        }
+       
+        
+      </style>
    <link rel="stylesheet" href="styles.css"> <!-- Make sure the path is correct -->
 </head>
 <body>
@@ -63,15 +141,173 @@ Lucida Handwriting;
       <h2>Where our catering bliss is sealed with a kiss</h2>
       <nav>
       <a href="Menu.html">Menu</a>
-        <a href=African Cuisine.html">AFRICAN CUISINES</a>
-        <a href=European Cuisine.html">EUROPEAN CUISINES</a>
-        <a href=Desserts.html">DESSERTS</a>
-        <a href=Beverages.html">BEVERAGES</a>
+        <a href="African Cuisine.html">African</a>
+        <a href="European Cuisine.html">European</a>
+        <a href="Desserts.html">Dessets</a>
+        <a href="Beverages.html">Beverages</a>
         
           </nav>
-   </header>
+       <button onclick="saveItem()">Save Item</button>
+  <button onclick="showItems()">Show Saved Items</button>
+  <button onclick="clearItems()">Clear Saved Items</button>
+  <button onclick="shareMenu()">Share Menu</button>
+    
+ </header>
+   <main>
+     <main>
+       <div class="menu-card">
+       
+        <h2>Soft Drinks</h2>
+      <div class="image-gallery">
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=185  height=200" alt="Fried Rice" class="menu-image">
+            <img src="https://images.unsplash.com/photo-1604977046802-80e00a8d0c67?w=185  height=200" alt="Jollof Rice" class="menu-image">
+            <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=185  height200" alt="White Rice&Stew" class="menu-image">
+          <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=185  height200" alt="White Rice&Stew" class="menu-image">
+         
+          </div>
+        <div class="menu-item">
+            <span class="item-name"> Fried Rice</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Jollof Rice</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Poundo Yam</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Garri</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Amala</span>
+            <span class="item-price">$35</span>
+        </div>
+        
+        <div class="divider"></div>
+        
+       <h2>Coffe & Tea</h2>
+        <div class="image-gallery">
+            <img src="https://images.unsplash.com/photo-1626074353765-517a681e40be?w=300" alt="Affang Soup" class="menu-image">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?width="185 height="200" alt="Oha Soup" class="menu-image">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?width="185 height="200" alt="Oha Soup" class="menu-image">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?width="185 height="200" alt="Oha Soup" class="menu-image">
+            
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Affang Soup</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Oha Soup</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Egusi soup</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Assorted Pepper Soup</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Ground Nut Soup</span>
+            <span class="item-price">$35</span>
+        </div>
+        
+        <div class="divider"></div>
+        
+      
+        <h2>Mocktails& Cocktails</h2>
+        <div class="image-gallery">
+           <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?width="185 height="200" alt="Oha Soup" class="menu-image">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?width="185 height="200" alt="Oha Soup" class="menu-image">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?width="185 height="200" alt="Oha Soup" class="menu-image">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?width="185 height="200" alt="Oha Soup" class="menu-image">
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Beef</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Chicken</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Shaki</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Ox Tail</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Fish</span>
+            <span class="item-price">$35</span>
+        </div>  
+   </main>
+    
+ <script>
+    // Save item
+    function saveItem() {
+      const item = prompt("Enter a menu item to save:");
+      if (item) {
+        let savedItems = JSON.parse(localStorage.getItem("menuItems")) || [];
+        savedItems.push(item);
+        localStorage.setItem("menuItems", JSON.stringify(savedItems));
+        alert("Item saved!");
+      }
+    }
+function saveItem() {
+      const item = prompt("Enter a menu item to save:");
+      if (item) {
+        let savedItems = JSON.parse(localStorage.getItem("menuItems")) || [];
+        savedItems.push(item);
+        localStorage.setItem("menuItems", JSON.stringify(savedItems));
+        alert("Item saved!");
+      }
+    }
+
+    function showItems() {
+      const savedItems = JSON.parse(localStorage.getItem("menuItems")) || [];
+      if (savedItems.length === 0) {
+        alert("No items saved.");
+      } else {
+        alert("Saved Items:\n" + savedItems.join("\n"));
+      }
+    }
+
+    function clearItems() {
+      localStorage.removeItem("menuItems");
+      alert("Saved items cleared.");
+    }
+
+    function shareMenu() {
+      const savedItems = JSON.parse(localStorage.getItem("menuItems")) || [];
+      const textToShare = savedItems.length > 0 ? savedItems.join("\n") : "No menu items saved.";
+
+      if (navigator.share) {
+        navigator.share({
+          title: "My Catering Menu",
+          text: textToShare
+        }).then(() => {
+          console.log("Menu shared successfully");
+        }).catch(err => {
+          console.error("Error sharing:", err);
+        });
+      } else {
+        alert("Sharing not supported on this browser.");
+      }
+    }
+  
+  
+  </script> 
+                                     
    
 </body>
    
 </html>
+  
   
