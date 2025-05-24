@@ -54,6 +54,175 @@ Lucida Handwriting;
          padding: 2rem;
          margin: 1rem;
       }
+
+        .menu-card {
+            background: white;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+      
+        
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+        }
+        .item-name {
+            font-weight: 500;
+        }
+        .item-price {
+            color: #e74c3c;
+            font-weight: 600;
+            min-width: 60px;
+            text-align: right;
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin: 20px 0;
+        }
+        .menu-image {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .menu-image:hover {
+            transform: scale(1.03);
+        }
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ddd, transparent);
+            margin: 25px 0;
+            border: none;
+        }
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .action-btn {
+            padding: 6px 15px;
+            background: #f3f3f3;
+            border-radius: 20px;
+            font-size: 13px;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .action-btn:hover {
+            background: #e74c3c;
+            color: white;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #999;
+            font-size: 12px;
+        }
+        
+        /* Search Bar Styles */
+        .search-container {
+            display: flex;
+            margin: 20px auto;
+            position: relative;
+            max-width: 600px;
+        }
+        #search-input {
+            flex: 1;
+            padding: 12px 20px;
+            border: 2px solid #ddd;
+            border-radius: 30px;
+            font-size: 16px;
+            outline: none;
+            transition: border 0.3s;
+        }
+        #search-input:focus {
+            border-color: #4285f4;
+        }
+        #voice-search {
+            position: absolute;
+            right: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #555;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        #voice-search.listening {
+            color: #f44336;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        .search-results {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .search-result-item {
+            padding: 10px;
+            margin: 5px 0;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+        }
+        .search-result-item:hover {
+            background-color: #f0f0f0;
+        }
+        .search-history {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .history-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .history-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .history-item {
+            background: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        .history-item:hover {
+            background: #4285f4;
+            color: white;
+            border-color: #4285f4;
+        }
+        .clear-history {
+            color: #f44336;
+            cursor: pointer;
+            font-size: 13px;
+        }
    </style>
    <link rel="stylesheet" href="styles.css"> <!-- Make sure the path is correct -->
 </head>
@@ -70,8 +239,316 @@ Lucida Handwriting;
         
         
           </nav>
+       <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search menus, dishes, or pages..." autocomplete="off">
+        <button id="voice-search" title="Voice Search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                <line x1="12" y1="19" x2="12" y2="23"></line>
+                <line x1="8" y1="23" x2="16" y2="23"></line>
+            </svg>
+        </button>
+        <button id="search-button" class="action-btn">Search</button>
+    </div>
+    
+    <div class="search-results" id="search-results"></div>
+    <div class="search-history" id="search-history">
+        <div class="history-title">
+            <h3>Recent Searches</h3>
+            <span class="clear-history" id="clear-history">Clear All</span>
+        </div>
+        <div class="history-items" id="history-items"></div>
+    </div>
+
+    <div class="menu-card">
+        <!-- Your existing menu content remains unchanged -->
+        <h1>FOOD MENU</h1>
+        
+        <!-- FOOD SECTION -->
+        <h2>FOOD</h2>
+        <div class="image-gallery">
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=300" alt="Fried Rice" class="menu-image">
+            <img src="https://images.unsplash.com/photo-1604977046802-80e00a8d0c67?w=300" alt="Spicy Chicken" class="menu-image">
+            <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=300" alt="Noodles" class="menu-image">
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Chicken Fried Rice</span>
+            <span class="item-price">$35</span>
+        </div>
+        <!-- Rest of your menu items... -->
+        
+    </div>
    </header>
    
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('search-input');
+            const searchButton = document.getElementById('search-button');
+            const voiceSearch = document.getElementById('voice-search');
+            const searchResults = document.getElementById('search-results');
+            const clearHistoryBtn = document.getElementById('clear-history');
+            const historyItemsContainer = document.getElementById('history-items');
+            
+            // Define your website pages with keywords
+            const websitePages = [
+                {
+                    name: "Main Menu",
+                    url: "/menu",
+                    keywords: ["menu", "main menu", "food menu", "all dishes"]
+                },
+                {
+                    name: "African Dishes Menu",
+                    url: "/african-dishes",
+                    keywords: ["african", "africa", "african food", "jollof", "suya", "egusi"]
+                },
+                {
+                    name: "Asian Dishes Menu",
+                    url: "/asian-dishes",
+                    keywords: ["asian", "asia", "chinese", "sushi", "ramen", "curry"]
+                },
+                {
+                    name: "European Dishes Menu",
+                    url: "/european-dishes",
+                    keywords: ["european", "europe", "pasta", "pizza", "french", "italian"]
+                },
+                {
+                    name: "Beverages Menu",
+                    url: "/beverages",
+                    keywords: ["drinks", "beverages", "juice", "soda", "wine", "coffee"]
+                },
+                {
+                    name: "Desserts Menu",
+                    url: "/desserts",
+                    keywords: ["dessert", "sweets", "cake", "ice cream", "chocolate"]
+                },
+                {
+                    name: "Events Page",
+                    url: "/events",
+                    keywords: ["events", "bookings", "reservations", "party"]
+                },
+                {
+                    name: "Contact Us",
+                    url: "/contact",
+                    keywords: ["contact", "contacts", "phone", "email", "location"]
+                }
+            ];
+
+            // Search History
+            const MAX_HISTORY_ITEMS = 5;
+            let searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+            
+            // Initialize
+            updateHistoryDisplay();
+            
+            // Speech Recognition
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            let recognition;
+            
+            if (SpeechRecognition) {
+                recognition = new SpeechRecognition();
+                recognition.continuous = false;
+                recognition.interimResults = false;
+                recognition.lang = 'en-US';
+                
+                recognition.onstart = function() {
+                    voiceSearch.classList.add('listening');
+                    searchInput.placeholder = "Listening...";
+                };
+                
+                recognition.onend = function() {
+                    voiceSearch.classList.remove('listening');
+                    searchInput.placeholder = "Search menus, dishes, or pages...";
+                };
+                
+                recognition.onresult = function(event) {
+                    const transcript = event.results[0][0].transcript;
+                    searchInput.value = transcript;
+                    performSearch(transcript);
+                };
+                
+                recognition.onerror = function(event) {
+                    console.error('Speech recognition error', event.error);
+                    showError(`Error: ${event.error}. Please try again.`);
+                };
+            } else {
+                voiceSearch.style.display = 'none';
+            }
+            
+            // Event Listeners
+            voiceSearch.addEventListener('click', startVoiceSearch);
+            searchButton.addEventListener('click', () => performSearch(searchInput.value.trim()));
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') performSearch(searchInput.value.trim());
+            });
+            clearHistoryBtn.addEventListener('click', clearSearchHistory);
+            searchInput.addEventListener('input', showSuggestions);
+            
+            // Functions
+            function startVoiceSearch() {
+                if (recognition) {
+                    try {
+                        recognition.start();
+                    } catch (e) {
+                        showError('Microphone access error. Please check permissions.');
+                    }
+                }
+            }
+            
+            function performSearch(query) {
+                if (!query) {
+                    showError('Please enter a search term');
+                    return;
+                }
+                
+                addToHistory(query);
+                const normalizedQuery = query.toLowerCase();
+                let foundPages = [];
+                
+                // Search logic
+                websitePages.forEach(page => {
+                    if (page.name.toLowerCase().includes(normalizedQuery)) {
+                        foundPages.push({...page, matchType: "page name"});
+                        return;
+                    }
+                    
+                    const matchedKeyword = page.keywords.find(keyword => 
+                        normalizedQuery.includes(keyword.toLowerCase()) || 
+                        keyword.toLowerCase().includes(normalizedQuery)
+                    );
+                    
+                    if (matchedKeyword) {
+                        foundPages.push({...page, matchType: `matched: ${matchedKeyword}`});
+                    }
+                });
+                
+                // Display results
+                if (foundPages.length > 0) {
+                    let resultsHTML = `<h3>Found ${foundPages.length} matching page(s):</h3>`;
+                    foundPages.forEach(page => {
+                        resultsHTML += `
+                            <div class="search-result-item" onclick="window.location.href='${page.url}'">
+                                <strong>${page.name}</strong>
+                                <p>${page.url} • ${page.matchType}</p>
+                            </div>
+                        `;
+                    });
+                    searchResults.innerHTML = resultsHTML;
+                } else {
+                    searchResults.innerHTML = `
+                        <p>No pages found for "${query}". Try searching for:</p>
+                        <ul>
+                            <li>"Menu" or "Food"</li>
+                            <li>"African" or "Asian" dishes</li>
+                            <li>"Beverages" or "Desserts"</li>
+                            <li>"Events" or "Contact"</li>
+                        </ul>
+                    `;
+                }
+            }
+            
+            function showSuggestions() {
+                const query = searchInput.value.trim().toLowerCase();
+                if (query.length === 0) {
+                    searchResults.innerHTML = '';
+                    return;
+                }
+                
+                // Get suggestions from both pages and keywords
+                const suggestions = [];
+                
+                websitePages.forEach(page => {
+                    // Check page names
+                    if (page.name.toLowerCase().includes(query)) {
+                        suggestions.push(page.name);
+                    }
+                    
+                    // Check keywords
+                    page.keywords.forEach(keyword => {
+                        if (keyword.toLowerCase().includes(query) && !suggestions.includes(keyword)) {
+                            suggestions.push(keyword);
+                        }
+                    });
+                });
+                
+                // Display suggestions
+                if (suggestions.length > 0) {
+                    let suggestionsHTML = `<div class="suggestions"><p>Suggestions:</p><ul>`;
+                    suggestions.slice(0, 5).forEach(suggestion => {
+                        suggestionsHTML += `<li onclick="document.getElementById('search-input').value='${suggestion}'; performSearch('${suggestion}')">${suggestion}</li>`;
+                    });
+                    suggestionsHTML += `</ul></div>`;
+                    searchResults.innerHTML = suggestionsHTML;
+                }
+            }
+            
+            function addToHistory(query) {
+                // Remove if already exists
+                const index = searchHistory.indexOf(query);
+                if (index !== -1) searchHistory.splice(index, 1);
+                
+                // Add to beginning
+                searchHistory.unshift(query);
+                
+                // Limit history size
+                if (searchHistory.length > MAX_HISTORY_ITEMS) {
+                    searchHistory.pop();
+                }
+                
+                // Save to storage and update display
+                localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+                updateHistoryDisplay();
+            }
+            
+            function updateHistoryDisplay() {
+                historyItemsContainer.innerHTML = '';
+                
+                searchHistory.forEach(item => {
+                    const historyElement = document.createElement('div');
+                    historyElement.className = 'history-item';
+                    historyElement.textContent = item;
+                    historyElement.addEventListener('click', () => {
+                        searchInput.value = item;
+                        performSearch(item);
+                    });
+                    historyItemsContainer.appendChild(historyElement);
+                });
+                
+                // Show/hide history section
+                document.getElementById('search-history').style.display = 
+                    searchHistory.length > 0 ? 'block' : 'none';
+            }
+            
+            function clearSearchHistory() {
+                searchHistory = [];
+                localStorage.removeItem('searchHistory');
+                updateHistoryDisplay();
+            }
+            
+            function showError(message) {
+                searchResults.innerHTML = `<p class="error">${message}</p>`;
+            }
+            
+            // Check microphone permission
+            function checkMicrophonePermission() {
+                if (navigator.permissions) {
+                    navigator.permissions.query({ name: 'microphone' })
+                        .then(permissionStatus => {
+                            permissionStatus.onchange = function() {
+                                if (this.state === 'denied') {
+                                    showError('Microphone access denied. Please enable in settings.');
+                                }
+                            };
+                        });
+                }
+            }
+            
+            checkMicrophonePermission();
+        });
+    </script>
+</body>
+</html>
+
 </body>
    
 </html>
