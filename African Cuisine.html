@@ -63,7 +63,77 @@ Lucida Handwriting;
 
 div.scroll-container img {
   padding: 10px;
-} 
+}
+      .menu-card {
+            background: white;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+       
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+        }
+        .item-name {
+            font-weight: 500;
+        }
+        .item-price {
+            color: #e74c3c;
+            font-weight: 600;
+            min-width: 60px;
+            text-align: right;
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin: 20px 0;
+        }
+        .menu-image {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .menu-image:hover {
+            transform: scale(1.03);
+        }
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ddd, transparent);
+            margin: 25px 0;
+            border: none;
+        }
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .action-btn {
+            padding: 6px 15px;
+            background: #f3f3f3;
+            border-radius: 20px;
+            font-size: 13px;
+            color: #666;
+            cursor: pointer;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #999;
+            font-size: 12px;
+        } 
       
       
 </style>
@@ -84,19 +154,201 @@ div.scroll-container img {
    </header>
    
     <main>
-      
-       <h2>starters</h2>
-        <div class="scroll-container">
-  <img src="https://ts1.mm.bing.net/th?id=OIP.waoy3qBJWmNQvYkbiuMDewHaE8&pid=15.1.jpg" alt="Cuisines" width="300" height="285"><P>DELICIOUS FOOD</P>
-  <img src="https://th.bing.com/th/id/OIP.69okGrOf8ZZlEsyIWMp10wHaE5?w=255&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="African delicacies" width="300" height="285"><P>TASTY FOOD</P>
-  <img src="https://th.bing.com/th/id/OIP.WwALUrLEXNZbyUN8d24HPQHaE8?w=243&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Northern Lights" width="300" height="285"><P>TASTY</P>
-  <img src="https://th.bing.com/th/id/OIP.HdzzQdKa8ozUTG7HH0NLUQHaEw?w=271&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Mountains" width="300" height="285">
-  <img src="https://th.bing.com/th/id/OIP.Xkmzez6u196HK7mUGmLlZQHaE5?w=231&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Cuisines" width="300" height="285">
-  <img src="https://th.bing.com/th/id/OIP.TwbLy3Nxzhz6OkCfWIBzwgHaE8?w=268&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="African delicacies" width="300" height="285">
-  <img src="https://th.bing.com/th/id/OIP.gPXrA_33lMJX3dHkBVXVagHaE8?w=277&h=185&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Northern Lights" width="300" height="285">
-  <img src="https://th.bing.com/th/id/OIP.KSXYH0H6ahmtMECS3Y44CAHaNK?w=115&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Mountains" width="300" height="285">
-  
-   </body>
-   
+       <div class="menu-card">
+        <h1>FOOD MENU</h1>
+        
+        <!-- FOOD SECTION -->
+        <h2>FOOD</h2>
+        <div class="image-gallery">
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=300" alt="Fried Rice" class="menu-image">
+            <img src="https://images.unsplash.com/photo-1604977046802-80e00a8d0c67?w=300" alt="Spicy Chicken" class="menu-image">
+            <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=300" alt="Noodles" class="menu-image">
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Chicken Fried Rice</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Spicy Chicken</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Banma Noodle</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Tuna Sandwich</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Teriyaki Rice Bowl</span>
+            <span class="item-price">$35</span>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <!-- SNACK SECTION -->
+        <h2>SNACK</h2>
+        <div class="image-gallery">
+            <img src="https://images.unsplash.com/photo-1626074353765-517a681e40be?w=300" alt="Potato Wedges" class="menu-image">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300" alt="Burger" class="menu-image">
+            <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=300" alt="Nuggets" class="menu-image">
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Potato Wedges</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Fried Fries</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Beef Burger</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Chicken Nuggets</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Teriyaki Rice Bowl</span>
+            <span class="item-price">$35</span>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <!-- DRINK SECTION -->
+        <h2>DRINK</h2>
+        <div class="image-gallery">
+            <img src="https://images.unsplash.com/photo-1551029506-0807df4e2031?w=300" alt="Summer Drink" class="menu-image">
+            <img src="https://images.unsplash.com/photo-1554866585-cd94860890b7?w=300" alt="Tropical Drink" class="menu-image">
+            <img src="https://images.unsplash.com/photo-1534841090574-cba2d662b62e?w=300" alt="Soda" class="menu-image">
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Summer Sour</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Mineral Water</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Tropical Sweet</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Fresh Soda</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Teriyaki Rice Bowl</span>
+            <span class="item-price">$35</span>
+        </div>
+        
+        <div class="action-buttons">
+            <div class="action-btn">Share</div>
+            <div class="action-btn">Save</div>
+            <div class="action-btn">Home</div>
+            <div class="action-btn">Search</div>
+            <div class="action-btn">Saved</div>
+            <div class="action-btn">Notifications</div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>Customize 19,404+ Menus Templates Online - Canva</strong></p>
+            <p>Images may be subject to copyright. Learn More</p>
+        </div>
+    </div>
+
+    </main>
+    <script>
+        // Share function
+        function shareMenu() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Food Menu',
+                    text: 'Check out this delicious menu!',
+                    url: window.location.href
+                }).catch(err => {
+                    console.log('Error sharing:', err);
+                    alert('Sharing failed. Please try again.');
+                });
+            } else {
+                // Fallback for desktop
+                alert('Copy this link to share: ' + window.location.href);
+                // Or implement a custom share dialog
+            }
+        }
+
+        // Save function
+        function saveMenu() {
+            localStorage.setItem('savedMenu', document.documentElement.outerHTML);
+            alert('Menu saved to browser!');
+            
+            // Visual feedback
+            const btn = document.querySelector('[onclick="saveMenu()"]');
+            btn.textContent = '✓ Saved';
+            setTimeout(() => btn.textContent = 'Save', 2000);
+        }
+
+        // Home function
+        function goHome() {
+            window.location.href = '/'; // Change to your home URL
+            // Or for single-page apps:
+            // loadHomeContent();
+        }
+
+        // Search function
+        function searchMenu() {
+            const searchTerm = prompt('What would you like to search for?');
+            if (searchTerm) {
+                const items = document.querySelectorAll('.item-name');
+                let found = false;
+                
+                items.forEach(item => {
+                    if (item.textContent.toLowerCase().includes(searchTerm.toLowerCase())) {
+                        item.parentElement.style.backgroundColor = '#fff9c4';
+                        found = true;
+                    }
+                });
+                
+                if (!found) alert('No matching items found');
+            }
+        }
+
+        // View Saved function
+        function viewSaved() {
+            const saved = localStorage.getItem('savedMenu');
+            if (saved) {
+                if (confirm('Open saved menu in new tab?')) {
+                    const blob = new Blob([saved], {type: 'text/html'});
+                    window.open(URL.createObjectURL(blob));
+                }
+            } else {
+                alert('No saved menus found');
+            }
+        }
+
+        // Notifications function
+        function showNotifications() {
+            // Example notification
+            if (!('Notification' in window)) {
+                alert('This browser doesn't support notifications');
+            } else if (Notification.permission === 'granted') {
+                new Notification('Menu Update', {
+                    body: 'New seasonal items available!',
+                    icon: 'https://example.com/icon.png'
+                });
+            } else if (Notification.permission !== 'denied') {
+                Notification.requestPermission().then(permission => {
+                    if (permission === 'granted') {
+                        showNotifications();
+                    }
+                });
+            }
+        }
+    </script>
+</body> 
+
 </html>
   
