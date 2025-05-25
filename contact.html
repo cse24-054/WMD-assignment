@@ -115,30 +115,65 @@ Lucida Handwriting;
             .contact-grid {
                 grid-template-columns: 1fr;
             }
-           .ringing-phone {
-    position: left;
-    left: 85px;
-    bottom: 20px;
-    background-color: #3498db;
-    color: white;
-    border-radius: 50%;
-    padding: 15px;
-    font-size: 200px;
-    cursor: pointer;
-    animation: ring 1.5s infinite;
-    z-index: 1000;
+    
+        .navbar {
+  overflow: hidden;
+  background-color:#B0903D  ;
+  border-radius: 8px;
+  margin-bottom: 2rem;
 }
 
-@keyframes ring {
-    0% { transform: rotate(0deg); }
-    10% { transform: rotate(15deg); }
-    20% { transform: rotate(-10deg); }
-    30% { transform: rotate(15deg); }
-    40% { transform: rotate(-10deg); }
-    50% { transform: rotate(5deg); }
-    60% { transform: rotate(0deg); }
-    100% { transform: rotate(0deg); }
+.navbar a,
+.dropbtn {
+  float: left;
+  font-size: 14px;
+  color:white ;
+  text-align: center;
+  padding: 10px 15px;
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color:#B0903D ;
+  color:white ;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:#B0903D;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: #B0903D;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color:white ;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+      
 
 
           
