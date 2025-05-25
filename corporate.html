@@ -8,83 +8,122 @@
     body {
       background-color: #082506;
       color: #B0903D;
-      font-family: Cursive, "Brush Script MT", "Lucida Handwriting";
+     font-family: Cursive	Brush Script MT
+Lucida Handwriting; ;
       margin: 2%;
       background-image: url('https://wallpaperaccess.com/full/5600212.jpg');
       background-size: cover;
       min-height: 100vh;
     }
 
-    h1, h2 {
+
+    h1 h2 {
+      color: #b0903d;
       text-align: center;
+      margin-bottom: 2rem;
     }
 
-    .content {
-      background-color: rgba(255, 255, 255, 0.8);
-      color: #000;
-      padding: 20px;
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 3rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .gallery-grid img {
+      width: 250px;
+      height: 200px;
       border-radius: 10px;
-      max-width: 800px;
-      margin: 2rem auto;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     }
 
-    a {
-      color: #B0903D;
+    figcaption {
+      margin-top: 1rem;
+      font-weight: bold;
+      text-align: left;
+      font-size:2rem;
+      color:#b0903d;
+    }
+
+    .back-link {
+      text-align: left;
+      margin-top: 3rem;
+    }
+
+    .back-link a {
+      color: #b0903d;
       text-decoration: none;
-      display: inline-block;
-      margin-top: 20px;
+      font-weight: bold;
+      ;
     }
 
-    .btn {
-      background-color: #B0903D;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-    }
-
-    .btn:hover {
-      background-color: #fff;
-      color: #082506;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #eee;
-      margin-top: 2rem;
+    .back-link a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
+  <h1>Corporate Catering Package</h1>
 
- 
+  <ul>
+    <li>
+      <figcaption>Custom birthday cakes & treats</figcaption>
+      <div class="gallery-grid">
+        <img src="https://plus.unsplash.com/premium_photo-1690214491960-d447e38d0bd0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FrZXxlbnwwfHwwfHx8MA%3D%3D.jpeg" alt="Birthday Cake 1">
+        <img src="https://images.unsplash.com/photo-1627385006598-6b7f89f20876?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRlZW5hZ2VycyUyMGJpcnRoZGF5JTIwY2FrZXxlbnwwfHwwfHx8MA%3D%3D.jpeg" alt="Birthday Cake 2">
+        <img src="https://images.unsplash.com/photo-1565661834013-d196ca46e14e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8V2VkZGluZyUyMCUyMGNha2V8ZW58MHx8MHx8fDA%3D.jpeg" alt="Birthday Cake 3">
+      </div>
+    </li>
 
-  <header>
-    <h1>Kathetro Corporate Catering</h1>
-    <h2>Professional Taste for Professional Events</h2>
-  </header>
+    <li>
+      <figcaption>Interactive food stations</figcaption>
+      <div class="gallery-grid">
+        <img src="https://media.istockphoto.com/id/1353193270/photo/asian-food-sold-in-a-shopping-mall-food-court.webp?a=1&b=1&s=612x612&w=0&k=20&c=LfEsKjsv-4tvmno4mCJU8p4GHKiOf8_AxoMiGLXvS5Q=.jpeg" alt="Food Station 1">
+        <img src="https://media.istockphoto.com/id/1560070460/photo/the-concept-of-a-culinary-buffet-dinner-catering-comes-to-life-as-a-group-of-people-gather-in.webp?a=1&b=1&s=612x612&w=0&k=20&c=0OMiZsi9Ok0TnSsarrB7_6I9BCHHQPah-jn1hNoO7TU=.jpeg" alt="Food Station 2">
+        <img src="https://media.istockphoto.com/id/175481203/photo/takeout-store-showcase.webp?a=1&b=1&s=612x612&w=0&k=20&c=Rbk48warDNE19fzwvGQ_3sABCq0YJVL9_QpFDXYp-Ss=.jpeg" alt="Food Station 3">
+      </div>
+    </li>
 
-  <main class="content">
-    <p>Whether it’s a conference, seminar, launch, or team lunch, Kathetro delivers elegant and efficient catering tailored to business events.</p>
+    <li>
+      <figcaption>Colorful themed décor & table setups</figcaption>
+      <div class="gallery-grid">
+        <img src="https://media.istockphoto.com/id/1410081622/photo/fresh-flowers-wedding-decoration.webp?a=1&b=1&s=612x612&w=0&k=20&c=D3j_lXEnyn6txQOx5gKekek5ZFnL820BG6iV3Xd5MzU=.jpeg" alt="Decor 1">
+        <img src="https://images.unsplash.com/photo-1559373098-a66f1c2a28af?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGVjb3IlMjBhbmQlMjB3ZWRkaW5nJTIwdGFibGUlMjBzZXR1cHN8ZW58MHx8MHx8fDA%3D.jpeg" alt="Decor 2">
+        <img src="https://media.istockphoto.com/id/2188527250/photo/setting-and-decorating-tables-for-a-childrens-party-in-the-banquet-hall.webp?a=1&b=1&s=612x612&w=0&k=20&c=TKYobDslpjMODhjQtmddfJpt30bETX6ZvZ0Az0QfeKI=.jpeg" alt="Decor 3">
+      </div>
+    </li>
 
-    <h3>Package Includes:</h3>
-    <ul>
-      <li>Formal and casual menu options</li>
-      <li>On-time setup and delivery</li>
-      <li>Professional uniformed staff</li>
-      <li>Coffee breaks and snack tables</li>
-      <li>Brand-themed table settings (if needed)</li>
-    </ul>
+    <li>
+      <figcaption>Optional entertainment (clowns, face painting, DJs)</figcaption>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVvcGxlJTIwZGFuY2luZ3xlbnwwfHwwfHx8MA%3D%3D.jpeg" alt="Entertainment 1">
+        <img src="https://media.istockphoto.com/id/184403538/photo/little-girl-having-face-painted-on-birthday-party.webp?a=1&b=1&s=612x612&w=0&k=20&c=24QGFL1OdV85cUt5Q8f2ftWXLNW8IQ09nCELzUs25lU=.jpeg" alt="Entertainment 2">
+        <img src="https://media.istockphoto.com/id/1173145232/photo/glowing-lights-from-dj-mixer-music-remote-buttons.webp?a=1&b=1&s=612x612&w=0&k=20&c=6tg0J4NHXGV2piP6-VuubGZ9WS_i1t2JzeztwX0x9Lg=.jpeg" alt="Entertainment 3">
+      </div>
+    </li>
 
-    <a href="Event.html" class="btn">Back to Events</a>
+    <li>
+      <figcaption>Kid-friendly and adult-friendly menu options</figcaption>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D.jpeg" alt="Food Option 1">
+        <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGZvb2R8ZW58MHx8MHx8fDA%3D.jpeg" alt="Food Option 2">
+        <img src="https://images.unsplash.com/photo-1519676867240-f03562e64548?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzZ8fGZvb2R8ZW58MHx8MHx8fDA%3D.jpeg" alt="Food Option 3">
+      </div>
+    </li>
+  </ul>
+
+  <div class="back-link">
+     <a href="Event.html" class="btn">Back to Events</a>
     <a href="contact.html" class="btn">Book Now</a>
-  </main>
-
-  <footer>
-    &copy; 2025 Kathetro Catering. All rights reserved.
-  </footer>
-
+  </div>
 </body>
 </html>
