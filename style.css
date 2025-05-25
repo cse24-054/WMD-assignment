@@ -104,6 +104,15 @@ p{text-color:#b0903d;}
    width:45px;
   height:45px;
 }
+ @media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  nav ul {
+    display: block; /* Fallback for IE */
+  }
+} 
 
 /* Font Awesome for icons (add this to your head if not already present) */
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
