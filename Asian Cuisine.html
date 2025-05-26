@@ -8,7 +8,7 @@
     body {
       background-color: #082506;
       color: #B0903D;
-      font-family: "Brush Script MT", "Lucida Handwriting", cursive;
+      font-family: " cursive Brush Script MT", "Lucida Handwriting",;
       margin: 2%;
       display: flex;
       flex-direction: column;
@@ -51,13 +51,13 @@
 
     .image-gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 10px;
+      grid-template-columns: repeat(4, 1fr));
+      gap: 5px;
       margin: 20px 0;
     }
 
     .menu-image {
-      width: 100%;
+      width: 185px;
       height: 200px;
       object-fit: cover;
       border-radius: 10px;
@@ -124,36 +124,98 @@
 
   <main id="menu-content">
     <div class="menu-card">
-      <h2>Chinese Delicacies</h2>
-      <div class="image-gallery">
-        <img src="https://www.bing.com/th/id/OIP.RNU40oIz9jSFEsH1tbbNFwHaE8?w=269" alt="Fried Rice" class="menu-image">
-        <img src="https://th.bing.com/th/id/OIP.hjWue3JTv9YdM25IKBZjswHaE7?w=306" alt="Sesame Chicken" class="menu-image">
-      </div>
-      <div class="menu-item"><span>Peking Duck</span><span class="item-price">$35</span></div>
-      <div class="menu-item"><span>Honey Sesame Chicken</span><span class="item-price">$35</span></div>
-      <div class="menu-item"><span>Sweet and Sour Pork</span><span class="item-price">$35</span></div>
-      <div class="menu-item"><span>Dumplings</span><span class="item-price">$35</span></div>
-      <div class="divider"></div>
-
-      <h2>Korean Delicacies</h2>
-      <div class="image-gallery">
-        <img src="https://th.bing.com/th/id/OIP.i07dApNtVY0WWze5VsWE2wHaJ1?w=216" alt="Bibimpap" class="menu-image">
-      </div>
-      <div class="menu-item"><span>Bibimpap</span><span class="item-price">$35</span></div>
-      <div class="menu-item"><span>Bulgogi</span><span class="item-price">$35</span></div>
-      <div class="menu-item"><span>Hobakjuk</span><span class="item-price">$35</span></div>
-      <div class="divider"></div>
-
-      <h2>Japanese Delicacies</h2>
-      <div class="image-gallery">
-        <img src="https://www.bing.com/th/id/OIP.iwohAsh4eThwneMompTNeQHaLH?w=160" alt="Teriyaki" class="menu-image">
-      </div>
-      <div class="menu-item"><span>Teriyaki</span><span class="item-price">$35</span></div>
-      <div class="menu-item"><span>Kare Raisu</span><span class="item-price">$35</span></div>
-      <div class="menu-item"><span>Oden</span><span class="item-price">$35</span></div>
+    <h2>Chinese Delicacies</h2>  
+  <div class="image-gallery">  
+        <img src="https://www.bing.com/th/id/OIP.RNU40oIz9jSFEsH1tbbNFwHaE8?w=269&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2 .jpg w=185 height=200" alt="Fried Rice" class="menu-image">  
+        <img src="https://th.bing.com/th/id/OIP.hjWue3JTv9YdM25IKBZjswHaE7?w=306&h=204&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2.jpg w=185 height=200" alt="Jollof Rice" class="menu-image">  
+        <img src="https://www.bing.com/th/id/OIP.gbXVgeNNQbvURxA673FTUQHaE7?w=146&h=120&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2.jpg w=185 height200" alt="White Rice&Stew" class="menu-image">  
+      <img src="https://www.bing.com/th/id/OIP.PHbMHGmKRhuRqjVRyF3NDQHaHa?w=146&h=146&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2.jpg w=185 height200" alt="White Rice&Stew" class="menu-image">  
+       
+      </div>  
+    <div class="menu-item">  
+        <span class="item-name"> Peking Duck</span>  
+        <span class="item-price">$35</span>  
+    </div>  
+    <div class="menu-item">  
+        <span class="item-name">Honey Sesame Chicken</span>  
+        <span class="item-price">$35</span>  
+    </div>  
+    <div class="menu-item">  
+        <span class="item-name">Sweet and Sour pork</span>  
+        <span class="item-price">$35</span>  
+    </div>  
+    <div class="menu-item">  
+        <span class="item-name">Dumplings</span>  
+        <span class="item-price">$35</span>  
+    </div>  
+    <div class="menu-item">  
+        <span class="item-name">Hong Shao Shi Zi Tou</span>  
+        <span class="item-price">$35</span>  
+    </div>  
+      
+    <div class="divider"></div>  
+      
+   <h2>Korean Delicacies</h2>  
+    <div class="image-gallery">  
+        <img src="https://th.bing.com/th/id/OIP.i07dApNtVY0WWze5VsWE2wHaJ1?w=216&h=288&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2.jpg w=300" alt="Affang Soup" class="menu-image">  
+        <img src="https://www.bing.com/th/id/OIP.HNqPHsRYm1W1bAAjC1NSTQHaE7?w=221&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2width="185 height="200" alt="Oha Soup" class="menu-image">  
+        <img src="https://th.bing.com/th/id/OIP.jGipjQZNsak-xgRBzKtB_wHaEJ?w=334&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2width="185 height="200" alt="Oha Soup" class="menu-image">  
+        <img src="https://th.bing.com/th/id/OIP.hlEfJL483ki5i4t46PBiEAHaE8?w=306&h=204&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2width="185 height="200" alt="Oha Soup" class="menu-image">  
+          
+    </div>  
+    <div class="menu-item">  
+        <span class="item-name">Bibimpab</span>  
+        <span class="item-price">$35</span>  
+    </div>  
+    <div class="menu-item">  
+        <span class="item-name">Bulgogi</span>  
+        <span class="item-price">$35</span>  
+    </div>  
+    <div class="menu-item">  
+        <span class="item-name">Hobakjuk</span>  
+        <span class="item-price">$35</span>  
+    </div>  
+    <div class="menu-item">  
+        <span class="item-name">Jjajamyeon</span>  
+        <span class="item-price">$35</span>  
+    </div>  
+    <div class="menu-item">  
+        <span class="item-name">Gopchang</span>  
+        <span class="item-price">$35</span>  
+    </div>  
+      
+    <div class="divider"></div>  
+      
+    
+    <h2>Japanese Delicaces</h2>  
+    <div class="image-gallery">  
+       <img src="https://www.bing.com/th/id/OIP.iwohAsh4eThwneMompTNeQHaLH?w=160&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2width="185 height="200" alt="Oha Soup" class="menu-image">  
+        <img src="https://www.bing.com/th/id/OIP.5d5oxTXLNYwk54ruSiXsqAHaE8?w=274&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2"width="185 height="200" alt="Oha Soup" class="menu-image">  
+        <img src="https://www.bing.com/th/id/OIP.Nbbe7RfnpiyiuRWKybniJwHaGk?w=238&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2width="185 height="200" alt="Oha Soup" class="menu-image">  
+        <img src="https://th.bing.com/th/id/OIP.b14Dm8GVsZ75n3AdBwi-owHaLH?w=204&h=306&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2width="185 height="200" alt="Oha Soup" class="menu-image">  
+    </div>  
+    <div class="menu-item">  
+        <span class="item-name">Triyaki</span>  
+        <span class="item-price">$35</span>  
+    </div>  
+    <div class="menu-item">  
+        <span class="item-name">Kare Raisu</span>  
+        <span class="item-price">$35</span>  
+    </div>  
+    <div class="menu-item">  
+        <span class="item-name">Oden</span>  
+        <span class="item-price">$35</span>  
+    </div>  
+    <div class="menu-item">  
+        <span class="item-name">Unaki Chazuke</span>  
+        <span class="item-price">$35</span>  
+    </div>  
+    <div class="menu-item">  
+        <span class="item-name">Udon</span>  
+        <span class="item-price">$35</span>  
     </div>
-  </main>
-
+</main>
+           
   <footer class="footer">
     &copy; 2025 Kathetro Catering. All rights reserved.
   </footer>
