@@ -1,138 +1,112 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet"href="styles.css"/>
-   <title>KATHETRO</title>
-   <style>
-      body {
-         background-color: #082506;
-         color: #B0903D;
-         font-family: Cursive	Brush Script MT
-Lucida Handwriting;
-         margin-left: 2%;
-         margin-right:2%;
-         display: flex;
-         min-height: 100vh;
-         flex-direction: column;
-          border:none;
-   background-image: url('https://wallpaperaccess.com/full/5600212.jpg');
-         background-size:cover;
-         image-align:center;
-     
-      }
-   
-      h1 h2 {
-         text-align: left;
-         font-size:6rem;
-          }
-
-      .container {
-         display: flex;
-         flex: 1;
-         padding: 20px;
-      }
-      a{
-         color:#B0903D;
-      }
-
-      .footer {
-        
-         text-color:#B0903D ;
-         text-align: center;
-         padding: 5px;
-         float:bottom;
-      }
-
-    
-     
-      }
-      @media(max-width: 768px)
-      {.dish{flex:1 0 45%;
-            }
-      }
-      @media(max-width:480px)
-      {.dish{flex:1 0 100%;
-            }
-      }
-     
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KATHETRO - African Menu</title>
+  <style>
+    body {
+      background-color: #082506;
+      color: #B0903D;
+      font-family: "cursive Brush Script MT", "Lucida Handwriting", ;
+      margin: 2%;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-image: url('https://wallpaperaccess.com/full/5600212.jpg');
+      background-size: cover;
     }
+
+    h1, h2 {
+      text-align: left;
+      font-size: 2.5rem;
+    }
+
+    nav a {
+      margin-right: 10px;
+      color: #B0903D;
+      text-decoration: none;
+    }
+
+    .menu-card {
+      background: rgba(0,0,0,0.3);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      max-width: 1000px;
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px dashed #eee;
+    }
+
+    .item-price {
+      font-weight: bold;
+      color: white;
+    }
+
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .menu-image {
+      width: 185px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .menu-image:hover {
+      transform: scale(1.03);
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, #ddd, transparent);
+      margin: 25px 0;
+      border: none;
+    }
+
     button {
-      padding: 0.75rem 1.5rem;
-      margin: 0.5rem;
-      font-size: 1rem;
+      padding: 10px 20px;
+      margin: 10px 5px;
+      background-color: #B0903D;
+      color: white;
       border: none;
       border-radius: 8px;
-      background-color:#B0903D;
-      color: white;
       cursor: pointer;
+      font-size: 1rem;
     }
+
     button:hover {
       background-color: #45a049;
     }
-  
-         .menu-card {
-            background: transparent;
-            max-width:800px;
-            margin: 0 auto;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-            margin-right:65%;
-        }
-       
-        }
-        .menu-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: left;
-            padding: 8px 0;
-            border-bottom: 1px dashed #eee;
-        }
-        .item-name {
-            font-weight: 500;
-        }
-        .item-price {
-            color: white;
-            font-weight: 600;
-            min-width: 60px;
-            text-align: right;
-        }
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap:5px;
-            margin: 20px 0;
-        }
-        .menu-image {
-            width: 185;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        .menu-image:hover {
-            transform: scale(1.03);
-        }
-        .divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, #ddd, transparent);
-            margin: 25px 0;
-            border: none;
-        }
-     
-       
-        .footer {
-            text-align: center;
-            margin-top: 30px;
-            color:#B0903D ;
-            font-size: 20px;
-        }
-       
-        
-      </style>
+     }
+     @media(max-width:768px)
+     {.dish{flex:1 0 45%;
+           }
+
+      @media(max-width:480px)
+     {.dish{flex:1 0 100%;
+           }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 20px;
+      color: #B0903D;
+    }
+ 
+   </style>
    <link rel="stylesheet" href="styles.css"> <!-- Make sure the path is correct -->
 </head>
 <body>
