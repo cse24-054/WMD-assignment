@@ -223,4 +223,62 @@
             <span class="item-price">$35</span>
         </div>  
    </main>
+    <footer class="footer">
+    &copy; 2025 Kathetro Catering. All rights reserved.
+  </footer>
+
+  <script>
+    function captureMenu(callback) {
+      const content = document.getElementById("menu-content");
+      html2canvas(content).then(canvas => {
+        const dataUrl = canvas.toDataURL("image/png");
+        localStorage.setItem("savedMenuImage", dataUrl);
+        callback(dataUrl);
+      });
+    }
+
+    function saveMenuAsImage() {
+      captureMenu(() => alert("Menu image saved!"));
+    }
+
+    function downloadMenuImage() {
+      captureMenu((dataUrl) => {
+        const link = document.createElement("a");
+        link.href = dataUrl;
+        link.download = "menu-image.png";
+        link.click();
+      });
+    }
+
+    function shareMenuImage() {
+      captureMenu((dataUrl) => {
+        fetch(dataUrl)
+          .then(res => res.blob())
+          .then(blob => {
+            const file = new File([blob], "menu-image.png", { type: "image/png" });
+            if (navigator.canShare && navigator.canShare({ files: [file] })) {
+              navigator.share({
+                files: [file],
+                title: "Asian Menu",
+                text: "Check out our delicious Asian menu!"
+              }).catch(err => console.error("Sharing failed:", err));
+            } else {
+              alert("Sharing not supported on this browser.");
+            }
+          });
+      });
+    }
+
+    function showSavedMenu() {
+      const dataUrl = localStorage.getItem("savedMenuImage");
+      if (dataUrl) {
+        const newWin = window.open();
+        newWin.document.write(`<img src="${dataUrl}" style="width:100%">`);
+      } else {
+        alert("No saved menu found.");
+      }
+    }
+  </script>
+</body>
+</html>      
     
