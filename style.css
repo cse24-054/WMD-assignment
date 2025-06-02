@@ -25,12 +25,11 @@ Lucida Handwriting;
 
 
       .footer {
-        
-         text-color:#B0903D ;
-         text-align: center;
-         padding: 5px;
-         float:bottom;
-      }
+      text-align: center;
+      margin-top: 30px;
+      font-size: 20px;
+      color: #B0903D;
+    }
 
       .btn {
          display: flex;
