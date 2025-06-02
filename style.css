@@ -80,7 +80,7 @@ Lucida Handwriting;
        }
 }
 .search-container {
-    display: flex;
+    display: left;
     width: 45px;
     max-width:45px;
     margin: 15px auto;
