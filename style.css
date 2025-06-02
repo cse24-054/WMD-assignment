@@ -15,19 +15,14 @@ Lucida Handwriting;
      
       }
    
-      h1 h2 {
-         text-align: left;
-         font-size:6rem;
-          }
+      
 
       .container {
          display: flex;
          flex: 1;
          padding: 20px;
       }
-      a{
-         color:#B0903D;
-      }
+
 
       .footer {
         
@@ -66,5 +61,64 @@ Lucida Handwriting;
         font-weight:bold;
         font-size:2rem;
        }
+  h1, h2 {
+      text-align: left;
+      font-size: 2.5rem;
+    }
+
+    nav a {
+      margin-right: 10px;
+      color: #B0903D;
+      text-decoration: none;
+    }
+
+    .menu-card {
+      background: rgba(0,0,0,0.3);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      max-width: 1000px;
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px dashed #eee;
+    }
+
+    .item-price {
+      font-weight: bold;
+      color: white;
+    }
+
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .menu-image {
+      width: 185px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .menu-image:hover {
+      transform: scale(1.03);
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, #ddd, transparent);
+      margin: 25px 0;
+      border: none;
+    }
+
 
 
