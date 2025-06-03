@@ -24,12 +24,13 @@ Lucida Handwriting;
       }
 
 
-      .footer {
+      footer {
       text-align: center;
-      margin-top: 30px;
-      font-size: 1.5px;
-      color: #B0903D;
-    }
+      padding: 1rem;
+      background-color: #eee;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+  }
 
       .btn {
          display: flex;
@@ -72,74 +73,10 @@ Lucida Handwriting;
       color: #B0903D;
       text-decoration: none;
     }
-          div.scroll-container {
-  background-color:;
-  overflow: auto;
-  white-space: nowrap;
-  padding: 5px;
-       float:bottom:
-}
-
-div.scroll-container img {
-  padding: 5px;
-}
+ 
        
-   .navbar {
-  overflow: hidden;
-  background-color:transparent;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-}
 
-.navbar a,
-.dropbtn {
-  float: left;
-  font-size: 14px;
-  color:white;
-  text-align: center;
-  padding: 10px 15px;
-  text-decoration: none;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
 
-.navbar a:hover,
-.dropdown:hover .dropbtn {
-  background-color:transparent ;
-  color:white ;
-}
-
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color:transparent;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  border-radius: 8px;
-  z-index: 1;
-}
-
-.dropdown-content a {
-  float: none;
-  color: #B0903D;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-  margin-top:15px;
-}
-
-.dropdown-content a:hover {
-  background-color: #B0903D ;
-}
-
-.dropdown:hover .dropdown-content {
   display: block;
 }
 
