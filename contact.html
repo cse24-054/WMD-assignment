@@ -7,22 +7,124 @@
 
    <title>KATHETRO</title>
    <style>
+      body {
+         background-color: #082506;
+         color: #B0903D;
+         font-family: Cursive	Brush Script MT
+Lucida Handwriting;
+         margin-left: 2%;
+         margin-right:2%;
+         display: flex;
+         min-height: 100vh;
+         flex-direction: column;
+          border:none;
+   background-image: url('https://wallpaperaccess.com/full/5600212.jpg');
+         background-size:cover;
+         image-align:center;
      
-   a{
+      }
+   
+      h1 h2 {
+         text-align: left;
+         font-size:6rem;
+          }
+
+      .container {
+         display: flex;
+         flex: 1;
+         padding: 20px;
+      }
+      a{
          color:#B0903D;
       }
-    
 
+      .footer {
         
+         text-color:#B0903D ;
+         text-align: center;
+         padding: 5px;
+         float:bottom;
+      }
+
+      .btn {
+         display: flex;
+         justify-content: space-between;
+      }
+
+      button {
+         height: 100px;
+         padding: 2rem;
+         margin: 1rem;
+      }
+        .container {
+            max-width: 40px;
+            margin-right:95;
+            padding: 20px;
+            background:transparent;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            text-align: left;
+            color:#B0903D;
+            margin-bottom: 30px;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .contact-item {
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #3498db;
+        }
+        
+        .contact-link {
+            display: inline;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+        
+        .contact-link:hover {
+            background: #2980b9;
+        }
+        
+        @media (max-width: 600px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
     </style>
-   <link rel="stylesheet" href="style.css"> <!-- Make sure the path is correct -->
+   <link rel="stylesheet" href="styles.css"> <!-- Make sure the path is correct -->
 </head>
 <body>
    <header>
       <h1>KATHETRO CONTACT CENTER</h1>
       <h2>Would you like to keep intouch with us?</h2>
       <nav>
-   <a href="index.html">Home</a>
+          <div class="navbar">
+  <a href="index.html">Home</a>
    <a href="Menu.html">Menu</a>
 <a href="Event.html">Events</a>
 <a href="contact.html">Contact</a>         
