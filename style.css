@@ -141,7 +141,14 @@ Lucida Handwriting;
         }
             .contact-grid {
                 grid-template-columns: 1fr;
-            }
+
+
+    .div{
+      color:B0903D;
+    }
+    .Form-lable{
+        color:B0903D;
+    }
                 
     
     
