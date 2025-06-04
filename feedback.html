@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedback</title>
+  <style>
+   
 
+    .feedback-container {
+      background: white;
+      padding: 30px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+
+   
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #28a745;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    .thank-you {
+      display: none;
+      text-align: center;
+      color: #28a745;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="feedback-container">
+  <h2>We Value Your Feedback</h2>
+  <form id="feedbackForm">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <select name="rating" required>
+      <option value="">Rate our service</option>
+      <option value="5">Excellent ★★★★★</option>
+      <option value="4">Very Good ★★★★</option>
+      <option value="3">Good ★★★</option>
+      <option value="2">Fair ★★</option>
+      <option value="1">Poor ★</option>
+    </select>
+    <textarea name="message" rows="4" placeholder="Your Message..." required></textarea>
+    <button type="submit">Submit Feedback</button>
+    <div class="thank-you" id="thankYouMsg">Thank you for your feedback!</div>
+  </form>
+</div>
+
+<script>
+  const form = document.getElementById('feedbackForm');
+  const thankYouMsg = document.getElementById('thankYouMsg');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Here you'd normally send the form data to a server (via fetch/AJAX)
+    form.reset();
+    thankYouMsg.style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
