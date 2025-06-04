@@ -141,7 +141,20 @@ Lucida Handwriting;
         }
             .contact-grid {
                 grid-template-columns: 1fr;
+                     
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  nav ul {
+    display: block;
+  }
+} 
+   
 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     .div{
       color:B0903D;
