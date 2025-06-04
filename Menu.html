@@ -1,177 +1,156 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF"-8">
-    <meta name="viewport"contant="width=device-width,inital scale=1.0">
-    <tittle>  KATHETRO</tittle>
-    <link rel="stylesheet" href="style.css">
-    <head>
-  
-   <style>
-      body {
-         background-color: #082506;
-         color: #B0903D;
-         font-family: Cursive	Brush Script MT
-Lucida Handwriting;
-         margin-left: 2%;
-         margin-right:2%;
-         display: flex;
-         min-height: 100vh;
-         flex-direction: column;
-          border:none;
-   background-image: url('https://wallpaperaccess.com/full/5600212.jpg');
-         background-size:cover;
-         image-align:center;
-     
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KATHETRO</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #082506;
+      color: #B0903D;
+      font-family: 'Lucida Handwriting', cursive;
+      margin: 0;
+      padding: 0;
+      background-image: url('https://wallpaperaccess.com/full/5600212.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .navbar a,
+    .dropbtn {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      font-size: 16px;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      background-color: #111;
+      min-width: 160px;
+      z-index: 1;
+      flex-direction: column;
+    }
+
+    .dropdown-content a {
+      color: #B0903D;
+      padding: 10px;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .scroll-container {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 10px;
+    }
+
+    .scroll-container img {
+      width: 300px;
+      height: auto;
+      margin: 5px;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #B0903D;
+    }
+
+    /* ✅ Responsive Adjustments */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
       }
-   
-      h1 h2 {
-         text-align: left;
-         font-size:6rem;
-          }
 
-    
-  
-      .container .btn{
-        display:block;
-        justify-content:space-between;
-        }
-      .button{
-        background:#B0903D;
-        border:none;
-        text-decoration:underline;
-        cursor:pointer;
-        font-weght:bold;
-        color:black;
-          padding:10px 20px:
-          transition:color0.3s;
+      h2 {
+        font-size: 1rem;
       }
-     div.scroll-container {
-  background-color:;
-  overflow: auto;
-  white-space: nowrap;
-  padding: 5px;
-       float:bottom:
-}
 
-div.scroll-container img {
-  padding: 5px;
-}
-       
-   .navbar {
-  overflow: hidden;
-  background-color:transparent;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-}
+      .navbar {
+        flex-direction: column;
+        align-items: center;
+      }
 
-.navbar a,
-.dropbtn {
-  float: left;
-  font-size: 14px;
-  color:white;
-  text-align: center;
-  padding: 10px 15px;
-  text-decoration: none;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
+      .dropdown-content {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>KATHETRO FOOD & DRINKS</h1>
+    <h2>Explore The World Of FOOd With Kathetro Menu</h2>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Menu ▼</button>
+        <div class="dropdown-content">
+          <a href="African Cuisine.html">African Cuisines</a>
+          <a href="Asian Cuisine.html">Asian Cuisines</a>
+          <a href="European Cuisine.html">European Cuisines</a>
+          <a href="Desserts.html">Desserts</a>
+          <a href="Beverages.html">Beverages</a>
+        </div>
+      </div>
+      <a href="Event.html">Events</a>
+      <a href="contact.html">Contacts</a>
+    </nav>
+  </header>
 
-.navbar a:hover,
-.dropdown:hover .dropbtn {
-  background-color:transparent ;
-  color:white ;
-}
-
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color:transparent;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  border-radius: 8px;
-  z-index: 1;
-}
-
-.dropdown-content a {
-  float: none;
-  color: #B0903D;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-  margin-top:15px;
-}
-
-.dropdown-content a:hover {
-  background-color: #B0903D ;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-    </style>
- </head>
-  <body>
-    <header>
-      <h1>  KATHETRO FOOD & DRINKS  </h1>
-      <h2>Explore The World Of FOOd WIth Kathetro Menu</h2>
-      <nav>
-        <div class="navbar">
-  <a href="index.html">Home</a>
-  <div class="dropdown">
-    <button class="dropbtn">Menu ▼</button>
-    <div class="dropdown-content">
-        <a href="African Cuisine.html">African Cuisines</a>
-       <a href="Asian Cuisine.html">Asian Cuisines</a>
-        <a href="European Cuisine.html">European Cuisines</a>
-        <a href="Desserts.html">Dessets</a>
-        <a href="Beverages.html">Beverages</a>
+  <section class="Menu">
+    <div class="scroll-container">
+      <img src="https://ts1.mm.bing.net/th?id=OIP.waoy3qBJWmNQvYkbiuMDewHaE8&pid=15.1.jpg" alt="Cuisines">
+      <img src="https://th.bing.com/th/id/OIP.69okGrOf8ZZlEsyIWMp10wHaE5?w=255&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="African delicacies">
+      <img src="https://th.bing.com/th/id/OIP.WwALUrLEXNZbyUN8d24HPQHaE8?w=243&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Northern Lights">
+      <img src="https://th.bing.com/th/id/OIP.HdzzQdKa8ozUTG7HH0NLUQHaEw?w=271&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Mountains">
+      <img src="https://th.bing.com/th/id/OIP.Xkmzez6u196HK7mUGmLlZQHaE5?w=231&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Cuisines">
+      <img src="https://th.bing.com/th/id/OIP.TwbLy3Nxzhz6OkCfWIBzwgHaE8?w=268&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="African delicacies">
+      <img src="https://th.bing.com/th/id/OIP.gPXrA_33lMJX3dHkBVXVagHaE8?w=277&h=185&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Northern Lights">
+      <img src="https://th.bing.com/th/id/OIP.KSXYH0H6ahmtMECS3Y44CAHaNK?w=115&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Mountains">
     </div>
-  </div>
-  <a href="Event.html">Events</a>
-  <a href="contact.html">Contacts</a>
-</div>
-      </nav>
-     
-    
-  
+  </section>
 
-   
-   
-    </header>
-     <section class="Menu">
-       <div class="scroll-container">
-  <img src="https://ts1.mm.bing.net/th?id=OIP.waoy3qBJWmNQvYkbiuMDewHaE8&pid=15.1.jpg" alt="Cuisines" width="300" height="285">
-  <img src="https://th.bing.com/th/id/OIP.69okGrOf8ZZlEsyIWMp10wHaE5?w=255&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="African delicacies" width="300" height="285">
-  <img src="https://th.bing.com/th/id/OIP.WwALUrLEXNZbyUN8d24HPQHaE8?w=243&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Northern Lights" width="300" height="285">
-  <img src="https://th.bing.com/th/id/OIP.HdzzQdKa8ozUTG7HH0NLUQHaEw?w=271&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Mountains" width="300" height="285">
-  <img src="https://th.bing.com/th/id/OIP.Xkmzez6u196HK7mUGmLlZQHaE5?w=231&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Cuisines" width="300" height="285">
-  <img src="https://th.bing.com/th/id/OIP.TwbLy3Nxzhz6OkCfWIBzwgHaE8?w=268&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="African delicacies" width="300" height="285">
-  <img src="https://th.bing.com/th/id/OIP.gPXrA_33lMJX3dHkBVXVagHaE8?w=277&h=185&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Northern Lights" width="300" height="285">
-  <img src="https://th.bing.com/th/id/OIP.KSXYH0H6ahmtMECS3Y44CAHaNK?w=115&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Mountains" width="300" height="285">
-    <footer>
-    <P>Copyright@KATHETROCateringCompany2025</P>
-  </footer>   
-</div>
-
-  </body>
-</html>
-
-
-                       
-   
-    
-    
-      
-                       
-   
-   
+  <footer>
+    <p>Copyright @ KATHETRO Catering Company 2025</p>
+  </footer>
+</body>
+        </html>
