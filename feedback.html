@@ -7,95 +7,122 @@
   <title>Feedback</title>
   <style>
     nav a{color:b0903d;}
-   
-
-    .feedback-container {
-      background: white;
-      padding: 30px;
-      max-width: 500px;
-      width: 90%;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      border-radius: 12px;
+    <style>
+   .feedback-form, .feedback-list {
+      max-width: 700px;
+      margin: 2rem auto;
+      background: #111;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
-   
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
     }
 
-    input, textarea, select {
+    input[type="text"], textarea, select {
       width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      margin-bottom: 20px;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
       border: 1px solid #ccc;
-      border-radius: 8px;
-      box-sizing: border-box;
-      font-size: 16px;
+      border-radius: 5px;
     }
 
     button {
-      width: 100%;
-      padding: 12px;
-      background-color:transparent;
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
       border: none;
+      background: #b0903d;
       color: white;
-      font-size: 16px;
-      border-radius: 8px;
+      font-size: 1rem;
+      border-radius: 5px;
       cursor: pointer;
     }
 
-    button:hover {
-      background-color:b0903d;
+    .feedback-entry {
+      border-top: 1px solid #ddd;
+      padding: 1rem 0;
     }
 
-    .thank-you {
-      display: none;
-      text-align: center;
-      color: b0903d;
-      font-weight: bold;
-      margin-top: 15px;
+    .feedback-entry:first-child {
+      border-top: none;
+    }
+
+    .rating {
+      color: gold;
     }
   </style>
 </head>
 <body>
 
-<div class="feedback-container">
-  <h2>We Value Your Feedback</h2>
- 
-      <nav>
-        <a href="index.html">Home</a>|
-        <a href="Menu.html">menu</a>|
-        <a href="Event.html">Events</a>|
-        <a href="contact.html">contact</a>
-         
-      </nav> 
-  <form id="feedbackForm">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <select name="rating" required>
-      <option value="">Rate our service</option>
-      <option value="5">Excellent ★★★★★</option>
-      <option value="4">Very Good ★★★★</option>
-      <option value="3">Good ★★★</option>
-      <option value="2">Fair ★★</option>
-      <option value="1">Poor ★</option>
+  <h1>Customer Feedback</h1>
+  <h2>Let us know what you think about us</h2>
+
+  <!-- Feedback Form -->
+  <div class="feedback-form">
+    <h2>Leave Your Feedback</h2>
+    <label for="name">Your Name</label>
+    <input type="text" id="name" placeholder="Enter your name" />
+
+    <label for="rating">Rating</label>
+    <select id="rating">
+      <option value="5">★★★★★ - Excellent</option>
+      <option value="4">★★★★☆ - Very Good</option>
+      <option value="3">★★★☆☆ - Good</option>
+      <option value="2">★★☆☆☆ - Fair</option>
+      <option value="1">★☆☆☆☆ - Poor</option>
     </select>
-    <textarea name="message" rows="4" placeholder="Your Message..." required></textarea>
-    <button type="submit">Submit Feedback</button>
-    <div class="thank-you" id="thankYouMsg">Thank you for your feedback!</div>
-  </form>
-</div>
 
-<script>
-  const form = document.getElementById('feedbackForm');
-  const thankYouMsg = document.getElementById('thankYouMsg');
+    <label for="message">Feedback</label>
+    <textarea id="message" rows="4" placeholder="Write your feedback here..."></textarea>
 
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    // Here you'd normally send the form data to a server (via fetch/AJAX)
-    form.reset();
-    thankYouMsg.style.display = 'block';
-  });
-</script>
+    <button onclick="submitFeedback()">Submit</button>
+  </div>
+
+  <!-- Feedback Display -->
+  <div class="feedback-list">
+    <h2>What Others Are Saying</h2>
+    <div id="feedbackContainer"></div>
+  </div>
+
+  <script>
+    const feedbackContainer = document.getElementById('feedbackContainer');
+
+    function submitFeedback() {
+      const name = document.getElementById('name').value.trim();
+      const rating = document.getElementById('rating').value;
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !message) {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+
+      const feedbackHTML = `
+        <div class="feedback-entry">
+          <strong>${name}</strong>
+          <div class="rating">${stars}</div>
+          <p>${message}</p>
+        </div>
+      `;
+
+      feedbackContainer.innerHTML = feedbackHTML + feedbackContainer.innerHTML;
+
+      // Clear form
+      document.getElementById('name').value = '';
+      document.getElementById('rating').value = '5';
+      document.getElementById('message').value = '';
+    }
+  </script>
 
 </body>
 </html>
+   
+
+   
+ 
